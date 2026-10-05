@@ -1063,39 +1063,3 @@ a:hover {
     text-decoration: none;
 }
 
-.module-content .folder-callout {
-    display: flex;
-    align-items: center;
-    gap: var(--sp-4);
-    margin: var(--sp-4) 0 var(--sp-6);
-    padding: var(--sp-3) var(--sp-4);
-    background: var(--surface);
-    border: 1px solid var(--blue-border);
-    border-radius: var(--radius);
-    color: var(--ink-soft);
-    box-shadow: var(--shadow-sm);
-    max-width: 520px;
-    transition: background 0.15s ease, border-color 0.15s ease;
-}
-
-.module-content .folder-callout:hover {
-    background: var(--blue-tint);
-    border-color: var(--blue);
-    text-decoration: none;
-}
-
-.folder-callout-icon {
-    font-size: 22px;
-    line-height: 1;
-}
-
-.folder-callout-desc {
-    font-size: 13px;
-    color: var(--text-secondary);
-}
-
-.folder-callout-arrow {
-    margin-left: auto;
-    color: var(--blue);
-    font-weight: 700;
-}

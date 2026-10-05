@@ -35,8 +35,6 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 **Tài liệu demo:** `MKG - Đề xuất Hợp tác Chiến lược VN.docx` - đề xuất hợp tác chiến lược giữa Công ty Cổ phần Tập đoàn Minh Khang và Công ty TNHH Điện tử Hòa Bình.
 
-[demo-folder]
-
 ### Bài tập 1: Viết tiếp Mục 7 - Điều khoản thương mại
 
 **Cách thực hiện:**
@@ -78,17 +76,16 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 >
 > Anh Quân cần rà soát Chính sách Bảo mật Thông tin sau khi tài liệu được chuyển từ PDF sang Word nhưng bị lỗi bố cục, định dạng và một số nội dung chưa rõ ràng. Anh dùng Copilot trong Word để chuẩn hóa cấu trúc, chỉnh sửa cách trình bày, cải thiện câu chữ và hoàn thiện tài liệu trước khi trình Ban Lãnh đạo phê duyệt.
 
-**Tài liệu demo:** `Chính sách Bảo mật Thông tin.docx` (chuyển đổi từ `SAMPLE Chính sách Bảo mật Thông tin.pdf`), cùng các tệp tham chiếu `MKG biên bản họp Q3 2026.docx` và `MKG_Data.xlsx`.
-
-[demo-folder]
+**Tài liệu demo:** `SAMPLE Chính sách Bảo mật Thông tin.pdf` (bản mẫu chuẩn), cùng các tệp tham chiếu `Transcript - BRK311 - Copy.docx` (biên bản một buổi trình bày tại Microsoft Ignite) và `MKG - Financial Analysis Q3 2026.xlsx`.
 
 ### Bài tập 3: Sửa font và định dạng theo bản mẫu
 
 **Cách thực hiện:**
 
-1. Mở file `Chính sách Bảo mật Thông tin.docx`
-2. Mở Copilot, đính kèm bản PDF mẫu bằng cách gõ "/"
-3. Nhập prompt:
+1. Mở file `SAMPLE Chính sách Bảo mật Thông tin.pdf` bằng **Word** (File > Open). Word sẽ chuyển PDF sang tài liệu Word và thường phát sinh lỗi bố cục, font chữ - đúng như tình huống của anh Quân
+2. Lưu tài liệu vừa chuyển đổi lên OneDrive với tên `Chính sách Bảo mật Thông tin.docx`
+3. Mở Copilot, đính kèm bản PDF mẫu bằng cách gõ "/"
+4. Nhập prompt:
 
 > **PROMPT:**
 >

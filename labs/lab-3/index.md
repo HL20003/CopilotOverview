@@ -33,8 +33,6 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 **Tài liệu nguồn:** `MKG - Chính sách giữ chân nhân sự.docx` - dự thảo "Chương trình giữ chân nhân sự quản lý cửa hàng", Khối Bán lẻ MK Retail.
 
-[demo-folder]
-
 ---
 
 ### Bài tập 1: Tạo bộ slide từ file Word

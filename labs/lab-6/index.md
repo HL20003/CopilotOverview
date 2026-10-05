@@ -23,11 +23,9 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 > **Anh Lê Quốc Hưng** - *Credit Risk Manager, MKG Finance*
 >
-> Anh Hưng được giao đánh giá mức độ phù hợp của chiến lược tín dụng hiện tại trước những thay đổi của thị trường tài chính tiêu dùng. Anh dùng Researcher Agent để phân tích xu hướng pháp lý, điều tiết và chất lượng tài sản của ngành trong 12 tháng qua. Agent đối chiếu với danh mục tín dụng của MKG Finance, xác định hai điểm chưa phù hợp với xu hướng thị trường và đánh giá mức độ rủi ro để hỗ trợ Ban Điều hành xem xét điều chỉnh chiến lược.
+> Anh Hưng được giao đánh giá mức độ phù hợp của chiến lược tín dụng hiện tại trước những thay đổi của thị trường tài chính tiêu dùng. Anh dùng Researcher Agent để phân tích xu hướng pháp lý, điều tiết và chất lượng tài sản của ngành trong 12 tháng qua. Agent đối chiếu với số liệu tài chính của Tập đoàn (kết quả kinh doanh, cơ cấu vay nợ, so sánh với doanh nghiệp cùng ngành), xác định hai điểm chưa phù hợp với xu hướng thị trường và đánh giá mức độ rủi ro để hỗ trợ Ban Điều hành xem xét điều chỉnh chiến lược.
 
-**Tệp đính kèm:** `MKG_Data.xlsx`
-
-[demo-folder]
+**Tệp đính kèm:** `MKG - Financial Analysis Q3 2026.xlsx`
 
 ---
 
@@ -36,12 +34,12 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 **Cách thực hiện:**
 
 1. Mở **Microsoft 365 Copilot app** (m365.cloud.microsoft) và chọn **Researcher** trong mục Agents
-2. Đính kèm file `MKG_Data.xlsx`
+2. Đính kèm file `MKG - Financial Analysis Q3 2026.xlsx`
 3. Nhập prompt:
 
 > **PROMPT:**
 >
-> Nghiên cứu môi trường pháp lý và điều tiết đối với hoạt động tài chính tiêu dùng tại Việt Nam trong 12 tháng qua: định hướng tăng trưởng tín dụng, các thay đổi về quy định giám sát, và xu hướng chất lượng tài sản của ngành. Sau đó đối chiếu với danh mục Tín dụng ngân hàng trong file MKG_Data.xlsx và chỉ ra hai điểm đang lệch so với xu hướng ngành, kèm mức độ rủi ro của từng điểm.
+> Nghiên cứu môi trường pháp lý và điều tiết đối với hoạt động tài chính tiêu dùng tại Việt Nam trong 12 tháng qua: định hướng tăng trưởng tín dụng, các thay đổi về quy định giám sát, và xu hướng chất lượng tài sản của ngành. Sau đó đối chiếu với số liệu tài chính trong file MKG - Financial Analysis Q3 2026.xlsx (các sheet TrialBalance, PL_Budget_Actual và Comps) và chỉ ra hai điểm trong kết quả kinh doanh hoặc cơ cấu vay nợ của Tập đoàn đang lệch so với xu hướng ngành, kèm mức độ rủi ro của từng điểm.
 
 ### Bài tập 2: Trả lời câu hỏi làm rõ
 
@@ -51,7 +49,7 @@ Researcher sẽ hỏi lại để làm rõ phạm vi nghiên cứu (khoảng th�
 >
 > 12 tháng tính đến hiện tại. A) các công ty tài chính tiêu dùng phù hợp. Chọn độ dài báo cáo: Long (5+ trang).
 
-**Kết quả mong đợi:** Agent lập **Research Plan** nhiều bước, tự thu thập dữ liệu, đối chiếu với `MKG_Data.xlsx` và xuất báo cáo Word *"Phân tích môi trường pháp lý tài chính"*.
+**Kết quả mong đợi:** Agent lập **Research Plan** nhiều bước, tự thu thập dữ liệu, đối chiếu với `MKG - Financial Analysis Q3 2026.xlsx` và xuất báo cáo Word *"Phân tích môi trường pháp lý tài chính"*.
 
 > [!TIP]
 > Researcher thường mất vài phút để hoàn thành. Anh/chị có thể chuyển sang việc khác và quay lại khi báo cáo xong.

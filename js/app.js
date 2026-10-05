@@ -1,14 +1,15 @@
 // Thư mục SharePoint chứa toàn bộ file demo của workshop
 const DEMO_FOLDER_URL = 'https://onelabvietnam-my.sharepoint.com/:f:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IgB0o4AtCLPHRqaBGbZrU3gKATUL0KNX3G2FWH7ICeEuZ4s?e=ue1xwC';
 
-// File demo cho buổi học - mặc định mở thư mục; thay url bằng link riêng của từng file nếu có
+// File demo cho buổi học - mỗi file mở thẳng link SharePoint của file đó
 const demoFiles = [
-    { name: 'MKG - Đề xuất Hợp tác Chiến lược VN.docx', desc: 'Lab 1 - Word (anh Hoàng Vũ)', icon: 'word', url: DEMO_FOLDER_URL },
-    { name: 'Chính sách Bảo mật Thông tin.docx + SAMPLE.pdf', desc: 'Lab 1 - Word (anh Minh Quân)', icon: 'word', url: DEMO_FOLDER_URL },
-    { name: 'MKG - Financial Analysis Q3 2026.xlsx', desc: 'Lab 2 - Excel (chị Thu Hằng)', icon: 'excel', url: DEMO_FOLDER_URL },
-    { name: 'MKG - Chính sách giữ chân nhân sự.docx + logo MKG', desc: 'Lab 3 - PowerPoint (chị Ngọc Lan)', icon: 'word', url: DEMO_FOLDER_URL },
-    { name: 'MKG_Data.xlsx', desc: 'Lab 6 - Researcher Agent (anh Quốc Hưng)', icon: 'excel', url: DEMO_FOLDER_URL },
-    { name: 'MKG - Nhật kí lỗi sản xuất.xlsx', desc: 'Lab 7 - Analyst Agent (anh Đức Thành)', icon: 'excel', url: DEMO_FOLDER_URL },
+    { name: 'MKG - Đề xuất Hợp tác Chiến lược VN.docx', desc: 'Lab 1 - Word (anh Hoàng Vũ)', icon: 'word', url: 'https://onelabvietnam-my.sharepoint.com/:w:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQBCGywlb8AoRq2-9onM99aBAd5Q7sohL8JSs_OHWuhINyI?e=6HBXGt' },
+    { name: 'SAMPLE Chính sách Bảo mật Thông tin.pdf', desc: 'Lab 1 - Word (anh Minh Quân)', icon: 'pdf', url: 'https://onelabvietnam-my.sharepoint.com/:b:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQDFSnJCEvD8SYi2cFigNeYgAQLjFUzUz95B5jK2_9vh2WI?e=fcPmV8' },
+    { name: 'Transcript - BRK311 - Copy.docx', desc: 'Lab 1 - Word (anh Minh Quân), tệp tham chiếu: biên bản buổi trình bày tại Microsoft Ignite', icon: 'word', url: 'https://onelabvietnam-my.sharepoint.com/:w:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQByIfWFnv-5R7I__k-gIxgPAfT4dmU8QJuHA881RvD1UiA?e=PfEOqt' },
+    { name: 'MKG - Financial Analysis Q3 2026.xlsx', desc: 'Lab 2 - Excel (chị Thu Hằng), Lab 6 - Researcher Agent (anh Quốc Hưng)', icon: 'excel', url: 'https://onelabvietnam-my.sharepoint.com/:x:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQAFjHoWzGIZS5mj8PM9gMd2AcqVXCXeeS4rp07RJa5Y-L4?e=iiaoC7' },
+    { name: 'MKG - Chính sách giữ chân nhân sự.docx', desc: 'Lab 3 - PowerPoint (chị Ngọc Lan)', icon: 'word', url: 'https://onelabvietnam-my.sharepoint.com/:w:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQBpe34SL9zwR4o0FaYnNIGcAT2d0VmVTReQ2ZLucmJJJ7o?e=xgTiLB' },
+    { name: 'MKG - logo.png', desc: 'Lab 3 - PowerPoint (chị Ngọc Lan)', icon: 'image', url: 'https://onelabvietnam-my.sharepoint.com/:i:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQC199RnmZQ8SYk7wbJqN0LrASDJmb3oR_l1VbzTp0oQn3w?e=2jg6Go' },
+    { name: 'MKG - Nhật kí lỗi sản xuất.xlsx', desc: 'Lab 7 - Analyst Agent (anh Đức Thành)', icon: 'excel', url: 'https://onelabvietnam-my.sharepoint.com/:x:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQCVyYD41q5ZRJiz71EYzPj3AaCgjMI9yG4t9CuyTE-O2Pc?e=rvznXW' },
 ];
 
 // Danh sách module và file markdown tương ứng
@@ -64,9 +65,7 @@ function processCustomBlocks(content) {
     });
 
     content.querySelectorAll('p').forEach(p => {
-        const tag = p.textContent.trim();
-        if (tag === '[download-files]') p.outerHTML = buildDownloadBlock();
-        else if (tag === '[demo-folder]') p.outerHTML = buildFolderLink();
+        if (p.textContent.trim() === '[download-files]') p.outerHTML = buildDownloadBlock();
     });
 }
 
@@ -93,13 +92,13 @@ function buildPromptCard(innerHtml) {
 
 // Khối tải file demo
 function buildDownloadBlock() {
-    const colors = { excel: '#107c10', word: '#2b579a', powerpoint: '#d24726' };
-    const letters = { excel: 'X', word: 'W', powerpoint: 'P' };
+    const colors = { excel: '#107c10', word: '#2b579a', powerpoint: '#d24726', pdf: '#b30b00', image: '#5c2d91' };
+    const letters = { excel: 'X', word: 'W', powerpoint: 'P', pdf: 'PDF', image: 'IMG' };
     const items = demoFiles.map(f => {
         const placeholder = f.url === '#';
         return `<a href="${escapeAttr(f.url)}" class="download-item${placeholder ? ' download-item--placeholder' : ''}"
             ${placeholder ? '' : 'target="_blank" rel="noopener noreferrer"'}>
-            <span class="download-icon" style="background:${colors[f.icon]};color:#fff;font-weight:700">${letters[f.icon]}</span>
+            <span class="download-icon" style="background:${colors[f.icon]};color:#fff;font-weight:700;font-size:${letters[f.icon].length > 1 ? 11 : 16}px">${letters[f.icon]}</span>
             <span class="download-info">
                 <span class="download-name">${escapeHtml(f.name)}</span>
                 <span class="download-desc">${escapeHtml(f.desc)}</span>
@@ -112,19 +111,11 @@ function buildDownloadBlock() {
             <span>File demo cho buổi học</span>
             <a class="folder-btn" href="${escapeAttr(DEMO_FOLDER_URL)}" target="_blank" rel="noopener noreferrer">📁 Mở thư mục trên SharePoint</a>
         </div>
-        <p class="download-block-hint">Tải về và lưu vào <strong>OneDrive</strong> của anh/chị trước khi bắt đầu Lab. Bấm vào từng file để mở thư mục chứa file đó.</p>
+        <p class="download-block-hint">Tải về và lưu vào <strong>OneDrive</strong> của anh/chị trước khi bắt đầu Lab. Bấm vào từng file để mở trên SharePoint.</p>
         <div class="download-list">${items}</div>
     </div>`;
 }
 
-// Dòng gọi nhanh tới thư mục file demo, dùng trong từng lab
-function buildFolderLink() {
-    return `<a class="folder-callout" href="${escapeAttr(DEMO_FOLDER_URL)}" target="_blank" rel="noopener noreferrer">
-        <span class="folder-callout-icon" aria-hidden="true">📁</span>
-        <span><strong>Thư mục file demo</strong><br><span class="folder-callout-desc">Mở thư mục SharePoint để tải file dùng cho bài tập này</span></span>
-        <span class="folder-callout-arrow" aria-hidden="true">↗</span>
-    </a>`;
-}
 
 // Sao chép prompt (dùng event delegation)
 document.addEventListener('click', async e => {

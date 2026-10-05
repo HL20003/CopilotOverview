@@ -27,8 +27,6 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 **Tệp đính kèm:** `MKG - Nhật kí lỗi sản xuất.xlsx`
 
-[demo-folder]
-
 ---
 
 ### Bài tập 1: Phân tích nguyên nhân gốc rễ
