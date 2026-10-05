@@ -1,15 +1,16 @@
 // Thư mục SharePoint chứa toàn bộ file demo của workshop
 const DEMO_FOLDER_URL = 'https://onelabvietnam-my.sharepoint.com/:f:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IgB0o4AtCLPHRqaBGbZrU3gKATUL0KNX3G2FWH7ICeEuZ4s?e=ue1xwC';
 
-// File demo cho buổi học - mỗi file mở thẳng link SharePoint của file đó
+// File demo cho buổi học - mỗi file mở thẳng link SharePoint của file đó.
+// Trong Markdown, viết [tên file](#file-<id>) để link tới file tương ứng.
 const demoFiles = [
-    { name: 'MKG - Đề xuất Hợp tác Chiến lược VN.docx', desc: 'Lab 1 - Word (anh Hoàng Vũ)', icon: 'word', url: 'https://onelabvietnam-my.sharepoint.com/:w:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQBCGywlb8AoRq2-9onM99aBAd5Q7sohL8JSs_OHWuhINyI?e=6HBXGt' },
-    { name: 'SAMPLE Chính sách Bảo mật Thông tin.pdf', desc: 'Lab 1 - Word (anh Minh Quân)', icon: 'pdf', url: 'https://onelabvietnam-my.sharepoint.com/:b:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQDFSnJCEvD8SYi2cFigNeYgAQLjFUzUz95B5jK2_9vh2WI?e=fcPmV8' },
-    { name: 'Transcript - BRK311 - Copy.docx', desc: 'Lab 1 - Word (anh Minh Quân), tệp tham chiếu: biên bản buổi trình bày tại Microsoft Ignite', icon: 'word', url: 'https://onelabvietnam-my.sharepoint.com/:w:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQByIfWFnv-5R7I__k-gIxgPAfT4dmU8QJuHA881RvD1UiA?e=PfEOqt' },
-    { name: 'MKG - Financial Analysis Q3 2026.xlsx', desc: 'Lab 2 - Excel (chị Thu Hằng), Lab 6 - Researcher Agent (anh Quốc Hưng)', icon: 'excel', url: 'https://onelabvietnam-my.sharepoint.com/:x:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQAFjHoWzGIZS5mj8PM9gMd2AcqVXCXeeS4rp07RJa5Y-L4?e=iiaoC7' },
-    { name: 'MKG - Chính sách giữ chân nhân sự.docx', desc: 'Lab 3 - PowerPoint (chị Ngọc Lan)', icon: 'word', url: 'https://onelabvietnam-my.sharepoint.com/:w:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQBpe34SL9zwR4o0FaYnNIGcAT2d0VmVTReQ2ZLucmJJJ7o?e=xgTiLB' },
-    { name: 'MKG - logo.png', desc: 'Lab 3 - PowerPoint (chị Ngọc Lan)', icon: 'image', url: 'https://onelabvietnam-my.sharepoint.com/:i:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQC199RnmZQ8SYk7wbJqN0LrASDJmb3oR_l1VbzTp0oQn3w?e=2jg6Go' },
-    { name: 'MKG - Nhật kí lỗi sản xuất.xlsx', desc: 'Lab 7 - Analyst Agent (anh Đức Thành)', icon: 'excel', url: 'https://onelabvietnam-my.sharepoint.com/:x:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQCVyYD41q5ZRJiz71EYzPj3AaCgjMI9yG4t9CuyTE-O2Pc?e=rvznXW' },
+    { id: 'proposal', name: 'MKG - Đề xuất Hợp tác Chiến lược VN.docx', desc: 'Lab 1 - Word (anh Hoàng Vũ)', icon: 'word', url: 'https://onelabvietnam-my.sharepoint.com/:w:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQBCGywlb8AoRq2-9onM99aBAd5Q7sohL8JSs_OHWuhINyI?e=6HBXGt' },
+    { id: 'policy-sample', name: 'SAMPLE Chính sách Bảo mật Thông tin.pdf', desc: 'Lab 1 - Word (anh Minh Quân)', icon: 'pdf', url: 'https://onelabvietnam-my.sharepoint.com/:b:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQDFSnJCEvD8SYi2cFigNeYgAQLjFUzUz95B5jK2_9vh2WI?e=fcPmV8' },
+    { id: 'transcript', name: 'Transcript - BRK311 - Copy.docx', desc: 'Lab 1 - Word (anh Minh Quân), tệp tham chiếu: biên bản buổi trình bày tại Microsoft Ignite', icon: 'word', url: 'https://onelabvietnam-my.sharepoint.com/:w:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQByIfWFnv-5R7I__k-gIxgPAfT4dmU8QJuHA881RvD1UiA?e=PfEOqt' },
+    { id: 'financial', name: 'MKG - Financial Analysis Q3 2026.xlsx', desc: 'Lab 2 - Excel (chị Thu Hằng), Lab 6 - Researcher Agent (anh Quốc Hưng)', icon: 'excel', url: 'https://onelabvietnam-my.sharepoint.com/:x:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQAFjHoWzGIZS5mj8PM9gMd2AcqVXCXeeS4rp07RJa5Y-L4?e=iiaoC7' },
+    { id: 'retention', name: 'MKG - Chính sách giữ chân nhân sự.docx', desc: 'Lab 3 - PowerPoint (chị Ngọc Lan)', icon: 'word', url: 'https://onelabvietnam-my.sharepoint.com/:w:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQBpe34SL9zwR4o0FaYnNIGcAT2d0VmVTReQ2ZLucmJJJ7o?e=xgTiLB' },
+    { id: 'logo', name: 'MKG - logo.png', desc: 'Lab 3 - PowerPoint (chị Ngọc Lan)', icon: 'image', url: 'https://onelabvietnam-my.sharepoint.com/:i:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQC199RnmZQ8SYk7wbJqN0LrASDJmb3oR_l1VbzTp0oQn3w?e=2jg6Go' },
+    { id: 'defect-log', name: 'MKG - Nhật kí lỗi sản xuất.xlsx', desc: 'Lab 7 - Analyst Agent (anh Đức Thành)', icon: 'excel', url: 'https://onelabvietnam-my.sharepoint.com/:x:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQCVyYD41q5ZRJiz71EYzPj3AaCgjMI9yG4t9CuyTE-O2Pc?e=rvznXW' },
 ];
 
 // Danh sách module và file markdown tương ứng
@@ -66,6 +67,16 @@ function processCustomBlocks(content) {
 
     content.querySelectorAll('p').forEach(p => {
         if (p.textContent.trim() === '[download-files]') p.outerHTML = buildDownloadBlock();
+    });
+
+    // [tên file](#file-<id>) -> link SharePoint của file đó
+    content.querySelectorAll('a[href^="#file-"]').forEach(a => {
+        const file = demoFiles.find(f => `#file-${f.id}` === a.getAttribute('href'));
+        if (!file) return;
+        a.href = file.url;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.classList.add('file-link');
     });
 }
 

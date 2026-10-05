@@ -25,7 +25,9 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 >
 > Anh Thành dùng Analyst Agent để phân tích nguyên nhân gốc rễ của 210 sự cố lỗi sản xuất trong quý 3: xếp hạng các nhà máy và dây chuyền theo tổng thời gian dừng máy, đánh giá ảnh hưởng của ca sản xuất đến số lượng sản phẩm lỗi, và quy đổi tổng tổn thất sang giá trị tài chính với chi phí giả định 1,2 triệu đồng mỗi phút dừng máy và 85 nghìn đồng mỗi sản phẩm lỗi. Kết quả được trình bày kèm biểu đồ để phục vụ quyết định cải tiến vận hành.
 
-**Tệp đính kèm:** `MKG - Nhật kí lỗi sản xuất.xlsx`
+**Tệp đính kèm:** [MKG - Nhật kí lỗi sản xuất.xlsx](#file-defect-log)
+
+*Xem toàn bộ file demo tại trang [Giới thiệu và chuẩn bị](#module-1).*
 
 ---
 
@@ -33,9 +35,10 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 **Cách thực hiện:**
 
-1. Mở **Microsoft 365 Copilot app** và chọn **Analyst** trong mục Agents
-2. Đính kèm file `MKG - Nhật kí lỗi sản xuất.xlsx`
-3. Nhập prompt:
+1. Truy cập [https://m365.cloud.microsoft/](https://m365.cloud.microsoft/) và đăng nhập bằng **tài khoản công ty** (tài khoản Microsoft 365 do công ty cấp) - **không dùng** tài khoản Microsoft cá nhân như Outlook.com, Hotmail
+2. Chọn **Analyst** trong mục Agents
+3. Đính kèm file `MKG - Nhật kí lỗi sản xuất.xlsx`
+4. Nhập prompt:
 
 > **PROMPT:**
 >

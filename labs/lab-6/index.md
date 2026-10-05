@@ -25,7 +25,9 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 >
 > Anh Hưng được giao đánh giá mức độ phù hợp của chiến lược tín dụng hiện tại trước những thay đổi của thị trường tài chính tiêu dùng. Anh dùng Researcher Agent để phân tích xu hướng pháp lý, điều tiết và chất lượng tài sản của ngành trong 12 tháng qua. Agent đối chiếu với số liệu tài chính của Tập đoàn (kết quả kinh doanh, cơ cấu vay nợ, so sánh với doanh nghiệp cùng ngành), xác định hai điểm chưa phù hợp với xu hướng thị trường và đánh giá mức độ rủi ro để hỗ trợ Ban Điều hành xem xét điều chỉnh chiến lược.
 
-**Tệp đính kèm:** `MKG - Financial Analysis Q3 2026.xlsx`
+**Tệp đính kèm:** [MKG - Financial Analysis Q3 2026.xlsx](#file-financial)
+
+*Xem toàn bộ file demo tại trang [Giới thiệu và chuẩn bị](#module-1).*
 
 ---
 
@@ -33,9 +35,10 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 **Cách thực hiện:**
 
-1. Mở **Microsoft 365 Copilot app** (m365.cloud.microsoft) và chọn **Researcher** trong mục Agents
-2. Đính kèm file `MKG - Financial Analysis Q3 2026.xlsx`
-3. Nhập prompt:
+1. Truy cập [https://m365.cloud.microsoft/](https://m365.cloud.microsoft/) và đăng nhập bằng **tài khoản công ty** (tài khoản Microsoft 365 do công ty cấp) - **không dùng** tài khoản Microsoft cá nhân như Outlook.com, Hotmail
+2. Chọn **Researcher** trong mục Agents
+3. Đính kèm file `MKG - Financial Analysis Q3 2026.xlsx`
+4. Nhập prompt:
 
 > **PROMPT:**
 >

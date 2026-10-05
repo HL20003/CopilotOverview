@@ -41,8 +41,8 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 ### Bước 1: Mở Microsoft 365 Copilot Chat
 
-1. Mở trình duyệt và truy cập [https://m365.cloud.microsoft/](https://m365.cloud.microsoft/)
-2. Đảm bảo URL là `https://m365.cloud.microsoft/` - **không phải** `https://copilot.cloud.microsoft/`
+1. Mở trình duyệt và truy cập [https://m365.cloud.microsoft/](https://m365.cloud.microsoft/) (hoặc [https://copilot.cloud.microsoft/](https://copilot.cloud.microsoft/) - cả hai đều vào được Copilot)
+2. Đăng nhập bằng **tài khoản công ty** (tài khoản Microsoft 365 do công ty cấp) - **không dùng** tài khoản Microsoft cá nhân như Outlook.com, Hotmail
 3. Chuyển sang tab **Chat**
 
 > [!TIP]

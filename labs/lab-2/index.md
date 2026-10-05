@@ -31,7 +31,9 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 >
 > Chị Hằng dùng Copilot trong Excel để phân tích kết quả kinh doanh quý 3/2026, so sánh số liệu thực hiện với kế hoạch và quý 2, xác định ba khoản mục biến động đáng chú ý nhất và đề xuất hành động cải thiện. Chị còn dùng built-in skills để dựng bảng cân đối kế toán, báo cáo kết quả kinh doanh và biểu đồ doanh thu thực tế so với kế hoạch theo tháng, phục vụ báo cáo Ban Lãnh đạo.
 
-**Tệp demo:** `MKG - Financial Analysis Q3 2026.xlsx`, gồm các sheet *Output - Q3 Performance*, *Đơn hàng*, *Doanh thu tháng*, *TrialBalance*, *UnitEconomics*, *Comps*, *PL_Budget_Actual*
+**Tệp demo:** [MKG - Financial Analysis Q3 2026.xlsx](#file-financial), gồm các sheet *Output - Q3 Performance*, *Đơn hàng*, *Doanh thu tháng*, *TrialBalance*, *UnitEconomics*, *Comps*, *PL_Budget_Actual*
+
+*Xem toàn bộ file demo tại trang [Giới thiệu và chuẩn bị](#module-1).*
 
 ---
 

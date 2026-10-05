@@ -31,7 +31,9 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 >
 > Chị Lan dùng Copilot trong PowerPoint để chuyển dự thảo chính sách giữ chân nhân sự tuyến cửa hàng thành bộ slide trực quan, chuyên nghiệp cho các quản lý cửa hàng. Bộ slide làm rõ mục tiêu, chính sách đãi ngộ, lộ trình phát triển và vai trò của quản lý trong việc triển khai, tạo sự thống nhất trước khi áp dụng trên toàn hệ thống.
 
-**Tài liệu nguồn:** `MKG - Chính sách giữ chân nhân sự.docx` - dự thảo "Chương trình giữ chân nhân sự quản lý cửa hàng", Khối Bán lẻ MK Retail.
+**Tài liệu nguồn:** [MKG - Chính sách giữ chân nhân sự.docx](#file-retention) - dự thảo "Chương trình giữ chân nhân sự quản lý cửa hàng", Khối Bán lẻ MK Retail. Ảnh logo: [MKG - logo.png](#file-logo).
+
+*Xem toàn bộ file demo tại trang [Giới thiệu và chuẩn bị](#module-1).*
 
 ---
 
@@ -54,7 +56,7 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 ### Bài tập 2: Thêm logo vào từng slide
 
-1. Chuẩn bị file ảnh logo MKG
+1. Tải file ảnh [MKG - logo.png](#file-logo)
 2. Đính kèm ảnh logo vào khung Copilot và nhập prompt:
 
 > **PROMPT:**

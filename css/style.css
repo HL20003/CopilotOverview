@@ -1063,3 +1063,13 @@ a:hover {
     text-decoration: none;
 }
 
+
+/* === Link tới file demo trong lab === */
+.module-content a.file-link {
+    font-weight: 600;
+}
+
+.module-content a.file-link::after {
+    content: " ↗";
+    font-size: 0.85em;
+}
