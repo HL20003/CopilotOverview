@@ -1073,3 +1073,8 @@ a:hover {
     content: " ↗";
     font-size: 0.85em;
 }
+
+/* Ảnh minh họa không có lightbox */
+.module-content .content-img {
+    cursor: default;
+}

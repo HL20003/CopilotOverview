@@ -33,7 +33,7 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 **Tệp demo:** [MKG - Financial Analysis Q3 2026.xlsx](#file-financial), gồm các sheet *Output - Q3 Performance*, *Đơn hàng*, *Doanh thu tháng*, *TrialBalance*, *UnitEconomics*, *Comps*, *PL_Budget_Actual*
 
-*Xem toàn bộ file demo tại trang [Giới thiệu và chuẩn bị](#module-1).*
+*Xem toàn bộ file demo tại trang [Giới thiệu và chuẩn bị](#module-1) và [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may).*
 
 ---
 
@@ -41,7 +41,7 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 **Cách thực hiện:**
 
-1. Mở file `MKG - Financial Analysis Q3 2026.xlsx`
+1. Mở file [MKG - Financial Analysis Q3 2026.xlsx](#file-financial) (xem [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may))
 2. Nhấn **Copilot** trên ribbon
 3. Nhập prompt:
 

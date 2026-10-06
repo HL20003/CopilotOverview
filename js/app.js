@@ -28,13 +28,13 @@ const modules = {
 };
 
 // Tải và hiển thị một module
-async function loadModule(key) {
+async function loadModule(key, section) {
     const mod = modules[key];
     if (!mod) return;
     const content = document.getElementById('module-content');
 
     try {
-        const res = await fetch(mod.file);
+        const res = await fetch(mod.file, { cache: 'no-cache' });
         if (!res.ok) throw new Error(`Không tải được ${mod.file}`);
         content.innerHTML = marked.parse(await res.text());
         processCustomBlocks(content);
@@ -45,11 +45,16 @@ async function loadModule(key) {
 
     updateSidebar(key);
     showView('module');
-    window.scrollTo(0, 0);
+    // Cuộn tức thì (CSS smooth scroll bị ngắt khi vừa đổi nội dung), chừa chỗ cho header cố định
+    const target = section && document.getElementById(section);
+    const top = target ? target.getBoundingClientRect().top + window.scrollY - 80 : 0;
+    window.scrollTo({ top, behavior: 'instant' });
 }
 
 // Chuyển blockquote đặc biệt thành thẻ TIP / NOTE / PROMPT
 function processCustomBlocks(content) {
+    content.querySelectorAll('h2, h3').forEach(h => { h.id = slugify(h.textContent); });
+
     content.querySelectorAll('blockquote').forEach(bq => {
         const html = bq.innerHTML;
         if (html.includes('[!TIP]')) {
@@ -67,6 +72,22 @@ function processCustomBlocks(content) {
 
     content.querySelectorAll('p').forEach(p => {
         if (p.textContent.trim() === '[download-files]') p.outerHTML = buildDownloadBlock();
+    });
+
+    // Ảnh: bọc trong <figure>, chú thích lấy từ alt
+    content.querySelectorAll('img').forEach(img => {
+        const figure = document.createElement('figure');
+        figure.className = 'content-figure';
+        img.classList.add('content-img');
+        // marked bọc ảnh trong <p>; thay cả <p> nếu nó chỉ chứa ảnh
+        const parent = img.parentElement;
+        (parent.tagName === 'P' && parent.childNodes.length === 1 ? parent : img).replaceWith(figure);
+        figure.appendChild(img);
+        if (img.alt) {
+            const caption = document.createElement('figcaption');
+            caption.textContent = img.alt;
+            figure.appendChild(caption);
+        }
     });
 
     // [tên file](#file-<id>) -> link SharePoint của file đó
@@ -122,7 +143,7 @@ function buildDownloadBlock() {
             <span>File demo cho buổi học</span>
             <a class="folder-btn" href="${escapeAttr(DEMO_FOLDER_URL)}" target="_blank" rel="noopener noreferrer">📁 Mở thư mục trên SharePoint</a>
         </div>
-        <p class="download-block-hint">Tải về và lưu vào <strong>OneDrive</strong> của anh/chị trước khi bắt đầu Lab. Bấm vào từng file để mở trên SharePoint.</p>
+        <p class="download-block-hint">Tải về và lưu vào <strong>OneDrive</strong> của anh/chị trước khi bắt đầu Lab. Bấm vào từng file để mở trên SharePoint, xem <a href="#module-1/cach-tai-file-word-excel-ve-may">cách tải file Word/Excel về máy</a>.</p>
         <div class="download-list">${items}</div>
     </div>`;
 }
@@ -175,11 +196,17 @@ function showView(name) {
     });
 }
 
-// Điều hướng bằng hash: #lab-1, #lab-2...
+// Điều hướng bằng hash: #lab-1 mở lab, #module-1/<section> mở lab và cuộn tới mục đó
 function route() {
-    const key = location.hash.replace('#', '');
-    if (modules[key]) loadModule(key);
+    const [key, section] = location.hash.replace('#', '').split('/');
+    if (modules[key]) loadModule(key, section);
     else showView('home');
+}
+
+// "Cách tải file Word/Excel về máy" -> "cach-tai-file-word-excel-ve-may"
+function slugify(text) {
+    return text.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D')
+        .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
 document.querySelectorAll('.nav-link').forEach(link => {

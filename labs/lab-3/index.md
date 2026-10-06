@@ -33,7 +33,7 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 **Tài liệu nguồn:** [MKG - Chính sách giữ chân nhân sự.docx](#file-retention) - dự thảo "Chương trình giữ chân nhân sự quản lý cửa hàng", Khối Bán lẻ MK Retail. Ảnh logo: [MKG - logo.png](#file-logo).
 
-*Xem toàn bộ file demo tại trang [Giới thiệu và chuẩn bị](#module-1).*
+*Xem toàn bộ file demo tại trang [Giới thiệu và chuẩn bị](#module-1) và [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may).*
 
 ---
 
@@ -43,7 +43,7 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 1. Mở PowerPoint, tạo bản trình bày mới
 2. Nhấn **Copilot** trên ribbon
-3. Gõ "/" để đính kèm file Word, rồi nhập prompt:
+3. Gõ "/" để đính kèm file [MKG - Chính sách giữ chân nhân sự.docx](#file-retention) (xem [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may)), rồi nhập prompt:
 
 > **PROMPT:**
 >

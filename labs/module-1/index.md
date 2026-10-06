@@ -48,10 +48,22 @@ Mỗi lab đặt anh/chị vào vai một nhân sự của MKG:
 ## Chuẩn bị
 
 1. Đăng nhập Microsoft 365 bằng tài khoản đã được cấp licence **Microsoft 365 Copilot**
-2. Tải các file demo bên dưới và lưu vào **OneDrive**
+2. Tải các file demo bên dưới và lưu vào **OneDrive** (xem [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may))
 3. Mở thử Word hoặc Excel, kiểm tra biểu tượng **Copilot** đã xuất hiện trên ribbon
 
 [download-files]
+
+### Cách tải file Word/Excel về máy
+
+Khi bấm vào file demo, file sẽ mở trên trình duyệt (Word/Excel trên web). Để tải bản sao về máy:
+
+1. Ở góc trái trên cùng, chọn **File**
+2. Chọn **Create a Copy**
+3. Chọn **Download a copy**
+
+![Tải bản sao file Word về máy: File > Create a Copy > Download a copy](images/download-a-copy.png)
+
+Sau khi tải về, tải file lên **OneDrive** của anh/chị để Copilot có thể tham chiếu.
 
 > [!TIP]
 > Copilot chỉ tham chiếu được file lưu trên OneDrive hoặc SharePoint. Khi viết prompt, gõ "/" để Copilot gợi ý file cần đính kèm.

@@ -35,13 +35,13 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 **Tài liệu demo:** [MKG - Đề xuất Hợp tác Chiến lược VN.docx](#file-proposal) - đề xuất hợp tác chiến lược giữa Công ty Cổ phần Tập đoàn Minh Khang và Công ty TNHH Điện tử Hòa Bình.
 
-*Xem toàn bộ file demo tại trang [Giới thiệu và chuẩn bị](#module-1).*
+*Xem toàn bộ file demo tại trang [Giới thiệu và chuẩn bị](#module-1) và [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may).*
 
 ### Bài tập 1: Viết tiếp Mục 7 - Điều khoản thương mại
 
 **Cách thực hiện:**
 
-1. Mở file `MKG - Đề xuất Hợp tác Chiến lược VN.docx`
+1. Mở file [MKG - Đề xuất Hợp tác Chiến lược VN.docx](#file-proposal) (xem [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may))
 2. Đặt con trỏ ở cuối tài liệu, mở **Copilot** trên ribbon
 3. Nhập prompt:
 
@@ -80,11 +80,13 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 **Tài liệu demo:** [SAMPLE Chính sách Bảo mật Thông tin.pdf](#file-policy-sample) (bản mẫu chuẩn), cùng các tệp tham chiếu [Transcript - BRK311 - Copy.docx](#file-transcript) (biên bản một buổi trình bày tại Microsoft Ignite) và [MKG - Financial Analysis Q3 2026.xlsx](#file-financial).
 
+*Xem [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may).*
+
 ### Bài tập 3: Sửa font và định dạng theo bản mẫu
 
 **Cách thực hiện:**
 
-1. Mở file `SAMPLE Chính sách Bảo mật Thông tin.pdf` bằng **Word** (File > Open). Word sẽ chuyển PDF sang tài liệu Word và thường phát sinh lỗi bố cục, font chữ - đúng như tình huống của anh Quân
+1. Mở file [SAMPLE Chính sách Bảo mật Thông tin.pdf](#file-policy-sample) bằng **Word** (File > Open). Word sẽ chuyển PDF sang tài liệu Word và thường phát sinh lỗi bố cục, font chữ - đúng như tình huống của anh Quân
 2. Lưu tài liệu vừa chuyển đổi lên OneDrive với tên `Chính sách Bảo mật Thông tin.docx`
 3. Mở Copilot, đính kèm bản PDF mẫu bằng cách gõ "/"
 4. Nhập prompt:

@@ -27,7 +27,7 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 **Tệp đính kèm:** [MKG - Nhật kí lỗi sản xuất.xlsx](#file-defect-log)
 
-*Xem toàn bộ file demo tại trang [Giới thiệu và chuẩn bị](#module-1).*
+*Xem toàn bộ file demo tại trang [Giới thiệu và chuẩn bị](#module-1) và [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may).*
 
 ---
 
@@ -37,7 +37,7 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 1. Truy cập [https://m365.cloud.microsoft/](https://m365.cloud.microsoft/) và đăng nhập bằng **tài khoản công ty** (tài khoản Microsoft 365 do công ty cấp) - **không dùng** tài khoản Microsoft cá nhân như Outlook.com, Hotmail
 2. Chọn **Analyst** trong mục Agents
-3. Đính kèm file `MKG - Nhật kí lỗi sản xuất.xlsx`
+3. Đính kèm file [MKG - Nhật kí lỗi sản xuất.xlsx](#file-defect-log) (xem [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may))
 4. Nhập prompt:
 
 > **PROMPT:**
