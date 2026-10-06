@@ -78,22 +78,21 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 >
 > Anh Quân cần rà soát Chính sách Bảo mật Thông tin sau khi tài liệu được chuyển từ PDF sang Word nhưng bị lỗi bố cục, định dạng và một số nội dung chưa rõ ràng. Anh dùng Copilot trong Word để chuẩn hóa cấu trúc, chỉnh sửa cách trình bày, cải thiện câu chữ và hoàn thiện tài liệu trước khi trình Ban Lãnh đạo phê duyệt.
 
-**Tài liệu demo:** [SAMPLE Chính sách Bảo mật Thông tin.pdf](#file-policy-sample) (bản mẫu chuẩn), cùng các tệp tham chiếu [Transcript - BRK311 - Copy.docx](#file-transcript) (biên bản một buổi trình bày tại Microsoft Ignite) và [MKG - Financial Analysis Q3 2026.xlsx](#file-financial).
+**Tài liệu demo:** [SAMPLE Chính sách Bảo mật Thông tin.docx](#file-policy-sample) (bản chuyển đổi từ PDF, bị lỗi font chữ và định dạng), cùng các tệp tham chiếu [Transcript - BRK311 - Copy.docx](#file-transcript) (biên bản một buổi trình bày tại Microsoft Ignite) và [MKG - Financial Analysis Q3 2026.xlsx](#file-financial).
 
 *Xem [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may).*
 
-### Bài tập 3: Sửa font và định dạng theo bản mẫu
+### Bài tập 3: Sửa font và định dạng tài liệu
 
 **Cách thực hiện:**
 
-1. Mở file [SAMPLE Chính sách Bảo mật Thông tin.pdf](#file-policy-sample) bằng **Word** (File > Open). Word sẽ chuyển PDF sang tài liệu Word và thường phát sinh lỗi bố cục, font chữ - đúng như tình huống của anh Quân
-2. Lưu tài liệu vừa chuyển đổi lên OneDrive với tên `Chính sách Bảo mật Thông tin.docx`
-3. Mở Copilot, đính kèm bản PDF mẫu bằng cách gõ "/"
-4. Nhập prompt:
+1. Mở file [SAMPLE Chính sách Bảo mật Thông tin.docx](#file-policy-sample) (xem [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may)). Để ý các chữ tiếng Việt bị lỗi dấu, sai font và bố cục lệch sau khi chuyển từ PDF
+2. Nhấn **Copilot** trên ribbon
+3. Nhập prompt:
 
 > **PROMPT:**
 >
-> Chỉnh sửa toàn bộ nội dung bị sai font chữ và format theo file sau SAMPLE Chính sách Bảo mật Thông tin.pdf
+> Chỉnh sửa toàn bộ nội dung bị sai font chữ và format trong tài liệu này, sửa lại các chữ tiếng Việt bị lỗi dấu và chuẩn hóa toàn bộ heading.
 
 > [!NOTE]
 > Copilot xử lý tốt font, heading và đánh số. Một số lỗi bố cục phức tạp (bảng bị vỡ, hình ảnh lệch) có thể vẫn cần chỉnh thủ công.
