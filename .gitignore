@@ -1,2 +1,4 @@
 .kiro/
 .env
+.wrangler/
+node_modules/
