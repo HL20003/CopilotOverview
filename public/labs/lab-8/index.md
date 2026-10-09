@@ -1,6 +1,9 @@
 # Lab 8 - Agent Builder in Copilot Chat
 
-**Thời lượng:** 15 phút | **Ứng dụng:** Microsoft 365 Copilot Chat, Agent Builder
+**Ứng dụng:** Microsoft 365 Copilot Chat, Agent Builder
+
+> [!NOTE]
+> **Toàn bộ tài liệu, số liệu và tình huống trong workshop là bản nháp (draft) dùng cho mục đích đào tạo.** Tên nhân vật, khách hàng và đối tác là giả định.
 
 ---
 
@@ -8,8 +11,7 @@
 
 Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
-- Hiểu sự khác biệt giữa **Declarative Agent** và **Custom Engine Agent**
-- Tạo một AI Agent hoàn chỉnh chỉ bằng ngôn ngữ tự nhiên - không cần code
+- Tạo một trợ lý AI cho đội ngũ chỉ bằng ngôn ngữ tự nhiên, không cần code
 - Cấu hình instructions, knowledge sources và starter prompts cho agent
 - Chia sẻ agent với đồng nghiệp
 
@@ -20,25 +22,17 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 | Khái niệm | Giải thích |
 |-----------|------------|
 | **Agent** | Trợ lý AI được tuỳ chỉnh, có thể trả lời câu hỏi và hướng dẫn người dùng dựa trên instructions và knowledge sources đã cấu hình |
-| **Declarative Agent** | Loại agent đơn giản, được cấu hình qua instructions, prompts và knowledge sources. Chạy trên nền tảng Copilot, phù hợp cho các tình huống có phạm vi rõ ràng |
-| **Custom Engine Agent** | Loại agent nâng cao, có orchestration, knowledge base và execution engine riêng. Không phụ thuộc Copilot, phù hợp cho tình huống phức tạp |
-| **Grounding** | Quá trình gắn kết responses của agent với các nguồn dữ liệu cụ thể (website, SharePoint, file) để đảm bảo độ chính xác |
+| **Knowledge source** | Tài liệu mà agent dùng để trả lời (file, thư mục SharePoint, website), giúp câu trả lời chính xác và có nguồn |
 | **Instruction** | Cấu hình định nghĩa cách agent hoạt động - giọng điệu, tính cách, ưu tiên và giới hạn |
 | **Starter Prompts** | Các câu hỏi gợi ý hiển thị trên giao diện chat để hướng dẫn người dùng bắt đầu |
-
-> [!NOTE]
-> **Microsoft 365 Copilot** là bản trả phí ($30/user/month) tích hợp sâu vào Office apps và được grounded trên dữ liệu tổ chức (email, file, cuộc họp). **Copilot Chat** là bản miễn phí dành cho doanh nghiệp, tương đương ChatGPT nhưng trong môi trường Microsoft 365, sử dụng dữ liệu từ web.
 
 ---
 
 ## Tình huống
 
-> Anh/chị muốn tạo **Exclusive Assistant** - một trợ lý nội bộ giúp RM Ưu tiên của Ngân hàng Minh Khang tra cứu nhanh sản phẩm (tiền gửi, tín dụng, bancassurance, wealth management), biểu phí, điều kiện KYC và thẩm quyền phê duyệt, cùng các chính sách ưu đãi cho khách hàng Exclusive. Agent chỉ trả lời dựa trên Sổ tay Sản phẩm và Chính sách nội bộ để đảm bảo chính xác và tuân thủ.
+> Là Exclusive Manager, anh/chị nhận ra các RM liên tục hỏi mình và Phòng Sản phẩm cùng những câu hỏi về biểu phí, hạn mức, thẩm quyền phê duyệt. Anh/chị tạo **Exclusive Assistant** - một trợ lý nội bộ giúp đội RM tự tra cứu nhanh sản phẩm (tiền gửi, tín dụng, bancassurance, wealth management), biểu phí, điều kiện KYC và thẩm quyền phê duyệt, cùng các chính sách ưu đãi cho khách hàng Exclusive. Agent chỉ trả lời dựa trên Sổ tay Sản phẩm và Chính sách nội bộ để đảm bảo chính xác và tuân thủ.
 
-**Knowledge source:** [MKB - Sổ tay Sản phẩm và Chính sách Exclusive.docx](#file-handbook) - lưu file này vào **OneDrive** của anh/chị trước khi bắt đầu (xem [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may)).
-
-> [!NOTE]
-> **Ngân hàng TMCP Minh Khang (MKB) là ngân hàng giả tưởng.** Toàn bộ sản phẩm, biểu phí và chính sách trong Sổ tay chỉ phục vụ mục đích minh họa, không liên quan đến bất kỳ tổ chức có thật nào.
+**Knowledge source:** [Sổ tay Sản phẩm và Chính sách Exclusive.docx](#file-handbook) - lưu file này vào **OneDrive** của anh/chị trước khi bắt đầu (xem [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may)).
 
 ---
 
@@ -72,7 +66,7 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 > **PROMPT:**
 >
-> Tôi muốn xây dựng một trợ lý nội bộ cho các RM Ưu tiên của Ngân hàng Minh Khang. Agent giúp RM tra cứu nhanh thông tin sản phẩm dành cho khách hàng Exclusive gồm tiền gửi, tín dụng, bancassurance và wealth management, biểu phí, điều kiện xét hạng thành viên, hồ sơ KYC và thẩm quyền phê duyệt hạn mức, cùng các chính sách ưu đãi cho khách hàng VIP. Agent trả lời ngắn gọn, có dẫn mục tương ứng trong Sổ tay, và khi câu hỏi cần phê duyệt ngoại lệ thì hướng RM đến đúng cấp phê duyệt.
+> Tôi muốn xây dựng một trợ lý nội bộ cho các RM Ưu tiên của Khối Khách hàng Ưu tiên. Agent giúp RM tra cứu nhanh thông tin sản phẩm dành cho khách hàng Exclusive gồm tiền gửi, tín dụng, bancassurance và wealth management, biểu phí, điều kiện xét hạng thành viên, hồ sơ KYC và thẩm quyền phê duyệt hạn mức, cùng các chính sách ưu đãi cho khách hàng VIP. Agent trả lời ngắn gọn, có dẫn mục tương ứng trong Sổ tay, và khi câu hỏi cần phê duyệt ngoại lệ thì hướng RM đến đúng cấp phê duyệt.
 
 Agent Builder sẽ tự động tạo **tên**, **mô tả**, **instructions** và **starter prompts** dựa trên mô tả của anh/chị.
 
@@ -99,12 +93,12 @@ Nếu được hỏi về phạm vi hoạt động, trả lời:
 ### Bước 6: Gắn kết agent với Sổ tay Sản phẩm nội bộ
 
 1. Chuyển sang tab **Configure**, kéo xuống phần **Knowledge**
-2. Thêm file [MKB - Sổ tay Sản phẩm và Chính sách Exclusive.docx](#file-handbook): chọn file đã lưu trên **OneDrive/SharePoint**, hoặc tải file lên trực tiếp
+2. Thêm file [Sổ tay Sản phẩm và Chính sách Exclusive.docx](#file-handbook): chọn file đã lưu trên **OneDrive/SharePoint**, hoặc tải file lên trực tiếp
 3. Quay lại tab **Describe** và nhập prompt để agent ưu tiên dùng tài liệu này:
 
 > **PROMPT:**
 >
-> Dùng file MKB - Sổ tay Sản phẩm và Chính sách Exclusive làm nguồn tham chiếu chính. Khi trả lời, ghi rõ mục tương ứng trong Sổ tay. Nếu Sổ tay không có thông tin, hãy nói rõ là chưa có thông tin và đề nghị RM liên hệ Phòng Sản phẩm Khách hàng Ưu tiên.
+> Dùng file Sổ tay Sản phẩm và Chính sách Exclusive làm nguồn tham chiếu chính. Khi trả lời, ghi rõ mục tương ứng trong Sổ tay. Nếu Sổ tay không có thông tin, hãy nói rõ là chưa có thông tin và đề nghị RM liên hệ Phòng Sản phẩm Khách hàng Ưu tiên.
 
 > [!TIP]
 > Trong môi trường thật, nên dùng một **thư mục hoặc site SharePoint** do Phòng Sản phẩm quản lý làm knowledge source. Khi tài liệu được cập nhật, agent tự dùng phiên bản mới, và agent tôn trọng phân quyền: người dùng không có quyền đọc file thì agent cũng không trả lời từ file đó.
@@ -135,7 +129,7 @@ Nếu được hỏi về phạm vi hoạt động, trả lời:
 
 > **PROMPT:**
 >
-> Khách hàng có tổng tài sản tại MKB 3,5 tỷ đồng thì đạt hạng thành viên nào và được những đặc quyền gì?
+> Khách hàng có tổng tài sản tại ngân hàng 3,5 tỷ đồng thì đạt hạng thành viên nào và được những đặc quyền gì?
 
 3. Kiểm tra xem câu trả lời có đúng với Sổ tay, có dẫn mục và phù hợp với giọng điệu mong muốn không
 
@@ -147,7 +141,7 @@ Nếu được hỏi về phạm vi hoạt động, trả lời:
 4. Nhấn **Go to agent** để thử nghiệm agent đã publish
 
 > [!NOTE]
-> Người được chia sẻ agent cũng cần **quyền đọc** file Sổ tay trên OneDrive/SharePoint thì agent mới trả lời được từ file đó. Theo quy định sử dụng AI của MKB, agent tự tạo chỉ chia sẻ trong phạm vi đơn vị; agent phục vụ khách hàng bên ngoài phải được Khối Công nghệ và Pháp chế phê duyệt.
+> Người được chia sẻ agent cũng cần **quyền đọc** file Sổ tay trên OneDrive/SharePoint thì agent mới trả lời được từ file đó. Theo quy định sử dụng AI, agent tự tạo chỉ chia sẻ trong phạm vi đơn vị; agent phục vụ khách hàng bên ngoài phải được Khối Công nghệ và Pháp chế phê duyệt.
 
 ---
 
@@ -191,7 +185,7 @@ Bây giờ hãy thử tạo một agent phù hợp với công việc thực t�
 
 | Anh/chị đã học được | Chi tiết |
 |-----------------|----------|
-| Tạo Declarative Agent | Dùng ngôn ngữ tự nhiên, không cần code |
+| Tạo trợ lý AI cho đội ngũ | Dùng ngôn ngữ tự nhiên, không cần code |
 | Cấu hình instructions | Định nghĩa tính cách, giới hạn và hành vi |
 | Thêm knowledge sources | Grounding agent với tài liệu nội bộ trên OneDrive/SharePoint |
 | Kiểm soát phạm vi | Bật "Only use selected sources" |

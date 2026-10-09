@@ -1,32 +1,29 @@
 // Gói zip chứa toàn bộ file demo (tạo bằng demo-files/_gen/sync_site_files.py)
-const DEMO_ZIP_URL = 'files/mkb-exclusive-demo-files.zip';
+const DEMO_ZIP_URL = 'files/exclusive-demo-files.zip';
 
 // File demo cho buổi học. url là đường dẫn trong thư mục files/ của site (tải về với tên đầy đủ),
 // hoặc link ngoài (SharePoint) mở ở tab mới.
 // Trong Markdown, viết [tên file](#file-<id>) để link tới file tương ứng.
 const demoFiles = [
-    { id: 'proposal', name: 'MKB - Thỏa thuận Hợp tác Exclusive Banking.docx', desc: 'Lab 1 - Word (anh Hoàng Vũ)', icon: 'word', url: 'files/mkb-thoa-thuan-hop-tac-exclusive-banking.docx' },
-    { id: 'policy-sample', name: 'SAMPLE Chính sách Bảo mật Thông tin Khách hàng.docx', desc: 'Lab 1 - Word (anh Minh Quân)', icon: 'word', url: 'files/sample-chinh-sach-bao-mat-thong-tin-khach-hang.docx' },
-    { id: 'transcript', name: 'Transcript - BRK311 - Copy.docx', desc: 'Lab 1 - Word (anh Minh Quân), tệp tham chiếu: biên bản buổi trình bày tại Microsoft Ignite', icon: 'word', url: 'https://onelabvietnam-my.sharepoint.com/:w:/g/personal/tan_minh_swotestinglabs_onmicrosoft_com/IQByIfWFnv-5R7I__k-gIxgPAfT4dmU8QJuHA881RvD1UiA?e=PfEOqt' },
-    { id: 'financial', name: 'MKB - Financial Analysis Q3 2026.xlsx', desc: 'Lab 2 - Excel (chị Thu Hằng), Lab 6 - Researcher Agent (anh Quốc Hưng)', icon: 'excel', url: 'files/mkb-financial-analysis-q3-2026.xlsx' },
-    { id: 'privilege', name: 'MKB - Chương trình Đặc quyền Exclusive 2027.docx', desc: 'Lab 3 - PowerPoint (chị Ngọc Lan)', icon: 'word', url: 'files/mkb-chuong-trinh-dac-quyen-exclusive-2027.docx' },
-    { id: 'logo', name: 'MKB - logo.png', desc: 'Lab 3 - PowerPoint (chị Ngọc Lan)', icon: 'image', url: 'files/mkb-logo.png' },
-    { id: 'incident-log', name: 'MKB - Nhật ký sự cố dịch vụ Exclusive Q3.xlsx', desc: 'Lab 7 - Analyst Agent (anh Đức Thành)', icon: 'excel', url: 'files/mkb-nhat-ky-su-co-dich-vu-exclusive-q3.xlsx' },
-    { id: 'handbook', name: 'MKB - Sổ tay Sản phẩm và Chính sách Exclusive.docx', desc: 'Lab 8 - Agent Builder (knowledge source của Exclusive Assistant)', icon: 'word', url: 'files/mkb-so-tay-san-pham-va-chinh-sach-exclusive.docx' },
+    { id: 'proposal', name: 'Thỏa thuận Hợp tác Exclusive Banking.docx', desc: 'Lab 2 - Word', icon: 'word', url: 'files/thoa-thuan-hop-tac-exclusive-banking.docx' },
+    { id: 'handbook', name: 'Sổ tay Sản phẩm và Chính sách Exclusive.docx', desc: 'Lab 2 - Word, Lab 8 - Agent Builder (knowledge source)', icon: 'word', url: 'files/so-tay-san-pham-va-chinh-sach-exclusive.docx' },
+    { id: 'policy-sample', name: 'SAMPLE Chính sách Bảo mật Thông tin Khách hàng.docx', desc: 'Lab 2 - Word (phần mở rộng)', icon: 'word', url: 'files/sample-chinh-sach-bao-mat-thong-tin-khach-hang.docx' },
+    { id: 'financial', name: 'Financial Analysis Q3 2026.xlsx', desc: 'Lab 1 - Copilot Chat, Lab 3 - Excel, Lab 7 - Researcher', icon: 'excel', url: 'files/financial-analysis-q3-2026.xlsx' },
+    { id: 'privilege', name: 'Chương trình Đặc quyền Exclusive 2027.docx', desc: 'Lab 1 - Copilot Chat, Lab 4 - PowerPoint', icon: 'word', url: 'files/chuong-trinh-dac-quyen-exclusive-2027.docx' },
 ];
 
 // Danh sách module và file markdown tương ứng
 const modules = {
-    'module-1': { title: 'Module 1 - Giới thiệu và chuẩn bị', file: 'labs/module-1/index.md' },
-    'module-2': { title: 'Module 2 - Copilot là gì', file: 'labs/module-2/index.md' },
-    'module-3': { title: 'Module 3 - Viết prompt hiệu quả', file: 'labs/module-3/index.md' },
-    'lab-1':    { title: 'Lab 1 - Copilot trong Word', file: 'labs/lab-1/index.md' },
-    'lab-2':    { title: 'Lab 2 - Copilot trong Excel', file: 'labs/lab-2/index.md' },
-    'lab-3':    { title: 'Lab 3 - Copilot trong PowerPoint', file: 'labs/lab-3/index.md' },
-    'lab-4':    { title: 'Lab 4 - Copilot trong Outlook', file: 'labs/lab-4/index.md' },
-    'lab-5':    { title: 'Lab 5 - Copilot trong Teams', file: 'labs/lab-5/index.md' },
-    'lab-6':    { title: 'Lab 6 - Researcher Agent', file: 'labs/lab-6/index.md' },
-    'lab-7':    { title: 'Lab 7 - Analyst Agent', file: 'labs/lab-7/index.md' },
+    'module-1': { title: 'Module 1 - Giới thiệu Copilot và chuẩn bị', file: 'labs/module-1/index.md' },
+    'module-2': { title: 'Module 2 - Viết prompt hiệu quả', file: 'labs/module-2/index.md' },
+    'module-3': { title: 'Module 3 - Personalization in Copilot', file: 'labs/module-3/index.md' },
+    'lab-1':    { title: 'Lab 1 - Copilot Chat', file: 'labs/lab-1/index.md' },
+    'lab-2':    { title: 'Lab 2 - Copilot trong Word', file: 'labs/lab-2/index.md' },
+    'lab-3':    { title: 'Lab 3 - Copilot trong Excel', file: 'labs/lab-3/index.md' },
+    'lab-4':    { title: 'Lab 4 - Copilot trong PowerPoint', file: 'labs/lab-4/index.md' },
+    'lab-5':    { title: 'Lab 5 - Copilot trong Outlook', file: 'labs/lab-5/index.md' },
+    'lab-6':    { title: 'Lab 6 - Copilot trong Teams', file: 'labs/lab-6/index.md' },
+    'lab-7':    { title: 'Lab 7 - Researcher Agent', file: 'labs/lab-7/index.md' },
     'lab-8':    { title: 'Lab 8 - Agent Builder in Copilot Chat', file: 'labs/lab-8/index.md' },
     'wrap':     { title: 'Tổng kết', file: 'labs/wrap/index.md' }
 };
@@ -156,7 +153,7 @@ function buildDownloadBlock() {
     return `<div class="download-block">
         <div class="download-block-header">
             <span>File demo cho buổi học</span>
-            <a class="folder-btn" href="${escapeAttr(DEMO_ZIP_URL)}" download="MKB - File demo Exclusive Banking.zip">⬇ Tải tất cả (.zip)</a>
+            <a class="folder-btn" href="${escapeAttr(DEMO_ZIP_URL)}" download="File demo Exclusive Banking.zip">⬇ Tải tất cả (.zip)</a>
         </div>
         <p class="download-block-hint">Bấm vào từng file để tải về, sau đó tải lên <strong>OneDrive</strong> của anh/chị trước khi bắt đầu Lab. Xem <a href="#module-1/cach-tai-file-word-excel-ve-may">cách tải file về và đưa lên OneDrive</a>.</p>
         <div class="download-list">${items}</div>

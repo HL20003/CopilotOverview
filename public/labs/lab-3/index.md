@@ -1,9 +1,9 @@
-# Lab 3 - Copilot trong PowerPoint
+# Lab 3 - Copilot trong Excel
 
-**Thời lượng:** 20 phút | **Ứng dụng:** PowerPoint
+**Ứng dụng:** Excel
 
 > [!NOTE]
-> **Ngân hàng TMCP Minh Khang (MKB) là ngân hàng giả tưởng.** Toàn bộ tên ngân hàng, nhân vật, khách hàng, số liệu và tài liệu trong lab chỉ phục vụ mục đích minh họa, không liên quan đến bất kỳ tổ chức có thật nào.
+> **Toàn bộ tài liệu, số liệu và tình huống trong workshop là bản nháp (draft) dùng cho mục đích đào tạo.** Tên nhân vật, khách hàng và đối tác là giả định.
 
 ---
 
@@ -11,98 +11,98 @@
 
 Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
-- Tạo bộ slide trình phê duyệt từ tài liệu Word, tập trung vào quyết định cần có
-- Đưa nhận diện thương hiệu (logo, màu) vào toàn bộ deck
-- Tạo phiên bản rút gọn gửi khách hàng, loại bỏ thông tin nội bộ
+- Hỏi Copilot về workbook nhiều sheet như hỏi một chuyên viên phân tích, nhận câu trả lời có số liệu và nguồn
+- Phân loại đội ngũ RM theo tiêu chí của mình để biết cần hỗ trợ ai
+- Tạo biểu đồ so sánh với chuẩn ngành, tiêu đề nói lên điều cần hành động
 
 ### Tính năng chính
 
 | Tính năng | Mô tả |
 |-----------|--------|
-| **Slide Creating** | Tạo bài thuyết trình từ file Word hoặc PDF |
-| **Slide Formatting** | Chuẩn hóa logo, màu sắc, font, bố cục toàn bộ deck |
-| **Script (Speaker notes)** | Tự động viết lời thoại cho từng slide |
+| **Insights** | Phân tích chuyên sâu, tìm xu hướng và biến động |
+| **Formula** | Tạo cột tính toán, phân loại theo tiêu chí |
+| **Infographic** | Trực quan hóa dữ liệu bằng biểu đồ |
 
 ---
 
 ## Tình huống
 
-> **Chị Phạm Ngọc Lan** - *Giám đốc Phát triển Khách hàng Ưu tiên, MKB*
+> **Chị Phạm Thu Hằng** - *Phó Giám đốc Khối Khách hàng Ưu tiên*
 >
-> Dự thảo Chương trình Đặc quyền Khách hàng Exclusive 2027 đã xong. Tuần này chị Lan phải trình Ban Điều hành phê duyệt ngân sách 186 tỷ đồng, và nếu được duyệt, RM cần ngay một trang giới thiệu gọn gàng để gửi khách hàng. Chị dùng Copilot trong PowerPoint để làm cả hai từ cùng một tài liệu nguồn.
+> Mười phút trước cuộc họp giao ban với Ban Điều hành, chị Hằng nhận được workbook kết quả quý 3 của Khối. Chị cần nắm nhanh bức tranh tổng thể, biết nhóm RM nào cần hỗ trợ, và có một biểu đồ cho thấy Khối đang đứng ở đâu so với các ngân hàng cùng nhóm về tỷ lệ CASA.
 
-**Tài liệu nguồn:** [MKB - Chương trình Đặc quyền Exclusive 2027.docx](#file-privilege) - dự thảo "Chương trình Đặc quyền Khách hàng Exclusive 2027", Khối Khách hàng Ưu tiên. Ảnh logo: [MKB - logo.png](#file-logo).
+**Tệp demo:** [Financial Analysis Q3 2026.xlsx](#file-financial), gồm các sheet *Output - Q3 Performance*, *Danh mục RM*, *Thu nhập tháng*, *TrialBalance*, *UnitEconomics*, *Comps*, *PL_Budget_Actual*
 
-*Xem toàn bộ file demo tại trang [Giới thiệu và chuẩn bị](#module-1) và [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may).*
+*Xem toàn bộ file demo tại trang [Module 1](#module-1) và [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may).*
 
 ---
 
-### Bài tập 1: Bộ slide trình Ban Điều hành phê duyệt
+### Bài tập 1: Bức tranh quý 3 trong 5 ý
 
 **Cách thực hiện:**
 
-1. Mở PowerPoint, tạo bản trình bày mới
+1. Mở file [Financial Analysis Q3 2026.xlsx](#file-financial)
 2. Nhấn **Copilot** trên ribbon
-3. Gõ "/" để đính kèm file [MKB - Chương trình Đặc quyền Exclusive 2027.docx](#file-privilege) (xem [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may)), rồi nhập prompt:
+3. Nhập prompt:
 
 > **PROMPT:**
 >
-> Dựa trên file đính kèm, tạo bộ slide 8 trang để trình Ban Điều hành phê duyệt chương trình. Slide đầu nêu thông điệp chính trong một câu. Có một slide so sánh 3 hạng thành viên dạng bảng, một slide ngân sách đặt cạnh thu nhập tăng thêm dự kiến, và slide cuối liệt kê rõ các quyết định cần Ban Điều hành phê duyệt. Thêm speaker notes cho mỗi slide, kèm một câu hỏi Ban Điều hành có thể đặt ra và gợi ý trả lời.
+> Tôi sắp họp với Ban Điều hành. Dựa trên workbook này, Khối Khách hàng Ưu tiên quý 3 đang tốt lên hay xấu đi so với quý 2 và so với kế hoạch? Điều gì đáng lo nhất và vì sao? Trả lời trong đúng 5 gạch đầu dòng, mỗi ý có con số cụ thể và ghi tên sheet lấy số liệu.
 
-**Kết quả mong đợi:** Bộ slide 8 trang đi từ vấn đề (CASA thấp, phụ thuộc bancassurance) đến đề xuất và quyết định cần phê duyệt; speaker notes có sẵn câu hỏi dự phòng.
+**Kết quả mong đợi:** 5 ý ngắn có số liệu, ví dụ: thu nhập tăng 2,1% so với quý 2 nhưng lợi nhuận trước thuế giảm 4,5% vì chi phí dự phòng cao hơn kế hoạch 79%; tỷ lệ CASA chỉ 16,5% so với kế hoạch 19%; phí bancassurance chiếm 52% tổng phí.
+
+### Bài tập 2: Phân loại đội ngũ RM để lên kế hoạch hỗ trợ
+
+> **PROMPT:**
+>
+> Trong sheet Danh mục RM, thêm cột "Xếp loại": loại A nếu AUM của RM cao hơn mức trung bình toàn khối và tỷ lệ CASA trên huy động từ 18% trở lên, loại C nếu cả hai tiêu chí đều không đạt, còn lại là loại B. Sau đó lập bảng đếm số RM loại A, B, C theo từng trung tâm và chỉ ra 3 trung tâm có tỷ lệ RM loại C cao nhất.
+
+**Kết quả mong đợi:** Cột Xếp loại dùng công thức và bảng tổng hợp theo trung tâm. Toàn khối có khoảng 33 RM loại A, 82 loại B và 125 loại C, cho thấy cần một chương trình hỗ trợ tập trung cho nhóm C.
 
 > [!TIP]
-> Bộ slide trình phê duyệt nên kết thúc bằng **quyết định cần có**, không phải lời cảm ơn. Nói rõ điều này trong prompt để Copilot sắp xếp nội dung đúng mạch.
+> Bấm vào một ô trong cột mới để xem công thức Copilot đã viết. Hiểu công thức giúp anh/chị tự điều chỉnh tiêu chí (ví dụ đổi ngưỡng CASA thành 20%) mà không cần hỏi lại.
 
-### Bài tập 2: Đưa nhận diện thương hiệu vào deck
-
-1. Tải file ảnh [MKB - logo.png](#file-logo)
-2. Đính kèm ảnh logo vào khung Copilot và nhập prompt:
+### Bài tập 3: So sánh với chuẩn ngành
 
 > **PROMPT:**
 >
-> Thêm logo Minh Khang Bank vào góc trên bên phải của mọi slide, trừ slide bìa. Đổi màu chủ đạo của bộ slide sang xanh navy và vàng gold theo màu logo, dùng font Arial cho toàn bộ nội dung.
+> Từ sheet UnitEconomics, tạo biểu đồ cột thể hiện tỷ lệ CASA của từng trung tâm, sắp xếp từ cao xuống thấp, thêm một đường ngang là trung vị của nhóm ngân hàng so sánh lấy từ sheet Comps. Tô màu khác cho các trung tâm dưới 15%. Đặt tiêu đề nêu đúng phát hiện chính, không chỉ ghi tên chỉ số.
 
-### Bài tập 3: Bản rút gọn gửi khách hàng
-
-> **PROMPT:**
->
-> Từ bộ slide này, tạo thêm một slide duy nhất giới thiệu chương trình để RM gửi kèm email cho khách hàng. Chỉ giữ thông tin dành cho khách hàng: các hạng thành viên, tiêu chí và đặc quyền nổi bật. Bỏ toàn bộ ngân sách, chỉ tiêu và số liệu nội bộ. Thêm dòng chú thích nhỏ "Ưu đãi áp dụng theo điều kiện và điều khoản của MKB".
-
-**Kết quả mong đợi:** Một slide sạch, không còn con số ngân sách hay chỉ tiêu nội bộ, phù hợp để xuất PDF gửi khách hàng.
+**Kết quả mong đợi:** Biểu đồ có đường chuẩn 24,5%, tiêu đề nêu phát hiện, ví dụ *"Cả 12 trung tâm có tỷ lệ CASA dưới trung vị ngành 24,5%, thấp nhất là Ninh Kiều với 11,9%"*.
 
 ---
 
 ## Lưu ý tuân thủ
 
 > [!NOTE]
-> Slide nội bộ chứa kết quả kinh doanh là tài liệu Mật, không gửi ra ngoài. Slide trình khách hàng không được nêu lợi nhuận chắc chắn và phải có tuyên bố rủi ro với sản phẩm đầu tư. Luôn kiểm tra số liệu trên slide khớp với file nguồn.
+> Danh mục khách hàng theo RM là thông tin Mật. Chỉ dùng Copilot với file đã gắn nhãn phân loại và mã khách hàng đã ẩn danh, không gửi bảng chi tiết khách hàng qua email ra ngoài. Số liệu Copilot tính phải được đối chiếu với báo cáo chính thức trước khi trình.
 
 ---
 
-## Prompt đề xuất - PowerPoint
+## Prompt đề xuất - Excel
 
-### Script Generation
-
-> **PROMPT:**
->
-> Viết speaker notes cho toàn bộ bài thuyết trình, mỗi slide gồm 3 ý chính và một câu chuyển sang slide tiếp theo, trình bày trong khoảng 45 giây, giọng tự tin và đi thẳng vào vấn đề.
-
-### Slide Formatting
+### Insights Analysis
 
 > **PROMPT:**
 >
-> 1. Sắp xếp lại các slide theo trình tự: vấn đề, giải pháp, chi phí và lợi ích, quyết định cần có.
-> 2. Rút gọn chữ trên mọi slide còn tối đa 5 gạch đầu dòng, chuyển phần giải thích chi tiết xuống speaker notes.
+> 1. So sánh hai trung tâm [tên trung tâm] và [tên trung tâm]: khác nhau ở đâu về số khách hàng mỗi RM, AUM bình quân mỗi khách hàng và thu nhập mỗi RM? Điều gì giải thích chênh lệch?
+> 2. Với tốc độ hiện tại, Khối có hoàn thành chỉ tiêu CASA cuối năm không? Cần tăng thêm bao nhiêu mỗi tháng để đạt?
 
-### Deck Generation
+### Formulas
 
 > **PROMPT:**
 >
-> Tạo bài trình bày 5 slide từ file /[báo cáo tháng] để báo cáo kết quả Vùng tại họp Ban Điều hành Khối, có một slide riêng nêu 3 rủi ro cần lưu ý.
+> 1. Phân bổ chỉ tiêu huy động CASA quý 4 cho từng trung tâm theo tỷ trọng AUM hiện tại, thêm cột chênh lệch giữa chỉ tiêu và số dư hiện có.
+> 2. Thêm cột cảnh báo cho các RM có số khách hàng vượt quá 120 người.
+
+### Chart / Infographic Generation
+
+> **PROMPT:**
+>
+> Từ sheet PL_Budget_Actual, tạo biểu đồ thác nước (waterfall) giải thích chênh lệch giữa lợi nhuận trước thuế kế hoạch và thực hiện quý 3 theo từng khoản mục thu nhập và chi phí.
 
 > [!NOTE]
-> File Word cần được lưu trên OneDrive hoặc SharePoint thì Copilot mới tham chiếu được.
+> Dữ liệu nên được định dạng dạng **Table** (Ctrl + T) để Copilot đọc chính xác hơn.
 
 ---
 
@@ -110,6 +110,6 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 | Anh/chị đã học được | Tính năng |
 |---------------------|-----------|
-| Tạo bộ slide trình phê duyệt từ file Word | Slide Creating |
-| Đưa logo, màu thương hiệu vào toàn bộ deck | Slide Formatting |
-| Speaker notes kèm câu hỏi dự phòng, bản rút gọn cho khách hàng | Script + Slide Creating |
+| Nắm nhanh bức tranh tổng thể, có số liệu và nguồn | Insights |
+| Phân loại đội ngũ RM theo tiêu chí riêng | Formula |
+| Biểu đồ so sánh với chuẩn ngành, tiêu đề nêu phát hiện | Infographic |

@@ -1,45 +1,42 @@
 # Tổng kết
 
-**Thời lượng:** 10 phút
-
 ---
 
 ## Những gì anh/chị đã thực hành
 
-| Lab | Ứng dụng | Năng lực |
-|-----|----------|----------|
-| 1 | Word | Content Generating, Translations, Formatting |
-| 2 | Excel | Insights, Formula, Infographic |
-| 3 | PowerPoint | Slide Creating / Formatting, Speaker notes |
-| 4 | Outlook | Email Summarizing, Email Drafting |
-| 5 | Teams | Recap, Translated Live Captions, Interpreter |
-| 6 | Researcher Agent | Nghiên cứu chuyên sâu, đối chiếu dữ liệu nội bộ |
-| 7 | Analyst Agent | Phân tích dữ liệu bằng code, Executive Dashboard |
-| 8 | Agent Builder in Copilot Chat | Tạo agent Exclusive Assistant, knowledge sources, chia sẻ agent |
+| Phần | Ứng dụng | Năng lực |
+|------|----------|----------|
+| Module 1-3 | Nền tảng | Copilot hoạt động thế nào, bảo mật, viết prompt hiệu quả, Customize Copilot |
+| Lab 1 | Copilot Chat | Tổng hợp từ nhiều nguồn cho Ban Điều hành, đối chiếu tài liệu, chế độ Work / Web |
+| Lab 2 | Word | Rà soát dự thảo, đối chiếu chính sách, soạn tờ trình phê duyệt ngoại lệ |
+| Lab 3 | Excel | Bức tranh kết quả kinh doanh, phân loại đội ngũ RM, so sánh với chuẩn ngành |
+| Lab 4 | PowerPoint | Slide giới thiệu cho khách hàng, slide tư vấn cá nhân hóa, diễn tập câu hỏi của khách hàng |
+| Lab 5 | Outlook | Hộp thư thành danh sách quyết định, xử lý email leo thang, chuẩn bị buổi gặp |
+| Lab 6 | Teams | Bắt kịp cuộc họp, biên bản điều hành, tóm tắt nhóm chat của đội |
+| Lab 7 | Researcher | Nghiên cứu chiến lược, kết nối với số liệu nội bộ |
+| Lab 8 | Agent Builder | Tạo trợ lý Exclusive Assistant cho đội RM |
 
 ---
 
 ## Công thức viết prompt hiệu quả
 
-Các prompt trong lab đều có chung cấu trúc:
-
 | Thành phần | Ví dụ trong lab |
 |------------|-----------------|
-| **Mục tiêu** - cần làm gì | "Viết Mục 7 điều khoản tài chính và tín dụng từ ghi chú đàm phán" |
-| **Ngữ cảnh** - cho ai, để làm gì | "Tôi sắp họp với Ban Điều hành", "để trình Ban Điều hành phê duyệt" |
-| **Nguồn** - dựa trên tài liệu nào | "từ sheet UnitEconomics và Comps", "dựa trên email và tài liệu của tôi" |
+| **Mục tiêu** - cần làm gì | "Đối chiếu các ưu đãi trong thỏa thuận với Sổ tay Sản phẩm" |
+| **Ngữ cảnh** - cho ai, để làm gì | "Tôi là Giám đốc Trung tâm, cần quyết định có trình ký hay không" |
+| **Nguồn** - dựa trên tài liệu nào | "dựa trên email, cuộc họp và tài liệu của tôi trong 7 ngày qua" |
 | **Kỳ vọng** - định dạng, độ dài, giọng điệu | "trả lời trong đúng 5 gạch đầu dòng, mỗi ý có con số", "chỗ chưa chắc ghi [CẦN XÁC NHẬN]" |
 
 > [!TIP]
-> Nếu kết quả chưa như ý, đừng viết lại từ đầu. Hãy trả lời tiếp trong cùng cuộc trò chuyện để Copilot chỉnh dần: "ngắn hơn", "thêm số liệu", "đổi giọng trang trọng hơn".
+> Nếu kết quả chưa như ý, đừng viết lại từ đầu. Hãy hỏi tiếp trong cùng cuộc trò chuyện để Copilot chỉnh dần: "ngắn hơn", "thêm số liệu", "nêu rõ quyết định cần có".
 
 ---
 
-## Ba thói quen nên bắt đầu ngay
+## Ba thói quen của người quản lý dùng Copilot
 
-1. **Mỗi sáng:** dùng Copilot trong Outlook tóm tắt email của khách hàng VIP, các đề nghị đang chờ anh/chị phê duyệt và việc cần làm trong ngày
-2. **Sau mỗi buổi review danh mục:** dùng Copilot trong Teams tạo biên bản, tách riêng cam kết với khách hàng và đầu việc phối hợp với Khối Tín dụng, Khối Nguồn vốn
-3. **Trước khi gửi thư tư vấn:** nhờ Copilot rà soát tính nhất quán, văn phong, số liệu và các câu chữ có thể bị hiểu là cam kết lợi nhuận
+1. **Đầu ngày:** dùng Copilot trong Outlook biến hộp thư thành danh sách việc cần quyết định và việc có thể giao cho đội ngũ
+2. **Sau mỗi buổi giao ban:** dùng Copilot trong Teams tạo biên bản điều hành có người phụ trách và thời hạn, gửi ngay cho cả nhóm
+3. **Trước khi trình lãnh đạo:** dùng Copilot Chat tổng hợp tình hình từ nhiều nguồn và nhờ Copilot đóng vai người phản biện để tìm điểm yếu
 
 > [!NOTE]
-> Copilot là trợ lý, không thay thế người kiểm tra. Luôn xem lại số liệu, tên riêng và các điều khoản quan trọng trước khi gửi đi. Không đưa thông tin định danh khách hàng (CIF, CCCD, số tài khoản) vào prompt, và chỉ lưu tài liệu nghiệp vụ ở nơi được phân quyền đúng: Copilot tôn trọng quyền truy cập, nên phân quyền sai đồng nghĩa với việc Copilot cũng "nhìn thấy" sai người.
+> Copilot là trợ lý, không thay thế người kiểm tra. Luôn xem lại số liệu và các điều khoản quan trọng trước khi gửi đi. Không đưa thông tin định danh khách hàng (CIF, CCCD, số tài khoản) vào prompt, và chỉ lưu tài liệu nghiệp vụ ở nơi được phân quyền đúng: Copilot tôn trọng quyền truy cập, nên phân quyền sai đồng nghĩa với việc Copilot cũng "nhìn thấy" sai người.

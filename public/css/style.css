@@ -265,7 +265,7 @@ a:hover {
 
 .agenda-header {
     display: grid;
-    grid-template-columns: 100px 320px 1fr;
+    grid-template-columns: 360px 1fr;
     padding: 14px 24px;
     background: var(--ink);
     color: rgba(255, 255, 255, 0.92);
@@ -277,7 +277,7 @@ a:hover {
 
 .agenda-row {
     display: grid;
-    grid-template-columns: 100px 320px 1fr;
+    grid-template-columns: 360px 1fr;
     padding: 15px 24px;
     border-bottom: 1px solid var(--border);
     align-items: center;
@@ -985,7 +985,7 @@ a:hover {
 @media (max-width: 900px) {
     .agenda-header,
     .agenda-row {
-        grid-template-columns: 80px 1fr;
+        grid-template-columns: 1fr;
     }
 
     .agenda-header span:last-child,

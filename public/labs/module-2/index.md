@@ -1,6 +1,7 @@
-# Module 2 - Copilot là gì
+# Module 2 - Viết prompt hiệu quả
 
-**Thời lượng:** 15 phút
+> [!NOTE]
+> **Toàn bộ tài liệu, số liệu và tình huống trong workshop là bản nháp (draft) dùng cho mục đích đào tạo.** Tên nhân vật, khách hàng và đối tác là giả định.
 
 ---
 
@@ -8,126 +9,176 @@
 
 Sau module này, anh/chị sẽ:
 
-- Hiểu Copilot lấy thông tin từ đâu và vì sao câu trả lời "biết" về công việc của mình
-- Biết Copilot nhìn thấy gì, không nhìn thấy gì, và vì sao phân quyền tài liệu quan trọng hơn bao giờ hết
-- Trả lời được những câu hỏi thường gặp về bảo mật khi dùng Copilot trong ngân hàng
-- Nhận biết giới hạn của Copilot để dùng đúng chỗ
+- Viết prompt rõ ràng theo công thức 4 thành phần
+- Biết cách hỏi tiếp để cải thiện kết quả thay vì viết lại từ đầu
+- Dùng 5 kỹ thuật giúp câu trả lời an toàn và chính xác hơn trong môi trường ngân hàng
+- Có sẵn bộ prompt mẫu cho công việc hằng ngày của Exclusive Manager
 
 ---
 
-## Microsoft 365 Copilot là gì?
+## Prompt là gì?
 
-Microsoft 365 Copilot là trợ lý AI tích hợp trong các ứng dụng anh/chị dùng hằng ngày: Outlook, Teams, Word, Excel, PowerPoint. Copilot kết hợp ba thành phần:
+**Prompt** là yêu cầu anh/chị gửi cho Copilot bằng ngôn ngữ tự nhiên, giống như giao việc cho một trợ lý. Giao việc càng rõ, kết quả càng sát ý.
 
-| Thành phần | Vai trò | Ví dụ với Exclusive Manager |
-|------------|---------|-----------------------------|
-| **Mô hình ngôn ngữ lớn (LLM)** | Hiểu câu hỏi và viết câu trả lời bằng ngôn ngữ tự nhiên | Viết thư trả lời khách hàng, tóm tắt báo cáo |
-| **Microsoft Graph** | "Bản đồ" dữ liệu công việc: email, lịch, file, cuộc họp, chat | Biết anh/chị vừa họp với ai, khách hàng nào gửi email hôm qua |
-| **Ứng dụng Microsoft 365** | Nơi Copilot làm việc cùng anh/chị | Nút Copilot trong Outlook, Excel, Teams... |
-
-Nhờ Microsoft Graph, Copilot hiểu **ngữ cảnh công việc** của riêng anh/chị (còn gọi là **Work IQ**). Đây là điểm khác biệt lớn nhất so với các chatbot AI công cộng.
+| Prompt chưa tốt | Prompt tốt hơn |
+|-----------------|----------------|
+| "Trả lời email này." | "Soạn thư trả lời khách hàng hạng Platinum đang hỏi lịch tư vấn danh mục, đề xuất 2 khung giờ tuần sau, giọng lịch sự và ngắn gọn." |
+| "Tóm tắt báo cáo." | "Tóm tắt báo cáo KPI quý 3 thành 5 ý cho Ban Điều hành, mỗi ý có một con số cụ thể." |
+| "Vẽ biểu đồ." | "Tạo biểu đồ cột tỷ lệ CASA theo trung tâm, sắp xếp giảm dần, tiêu đề nêu trung tâm thấp nhất." |
 
 ---
 
-## Điều gì xảy ra khi anh/chị đặt câu hỏi?
+## Công thức 4 thành phần
 
-| Bước | Điều gì xảy ra | Ý nghĩa với ngân hàng |
-|------|----------------|------------------------|
-| **1. Đặt câu hỏi** | Anh/chị nhập prompt trong Outlook, Excel, Copilot Chat... | Không nhập số CIF, CCCD, số tài khoản vào prompt |
-| **2. Tìm dữ liệu** | Copilot tìm trong email, file, cuộc họp mà **anh/chị có quyền xem** | Copilot không vượt quá quyền của anh/chị |
-| **3. Soạn câu trả lời** | Mô hình AI dùng dữ liệu tìm được để viết câu trả lời | Câu trả lời tốt hay không phụ thuộc vào dữ liệu nguồn |
-| **4. Kiểm tra** | Hệ thống kiểm tra bảo mật, chính sách và nội dung có hại | Áp dụng các chính sách bảo vệ của ngân hàng |
-| **5. Trả lời** | Kết quả hiển thị kèm **trích dẫn nguồn** | Bấm vào trích dẫn để kiểm tra lại trước khi dùng |
+| Thành phần | Câu hỏi tự đặt ra | Ví dụ |
+|------------|-------------------|-------|
+| **Mục tiêu** | Tôi cần Copilot làm gì? | "Soạn email nhắc chỉ tiêu..." |
+| **Ngữ cảnh** | Cho ai, để làm gì, tôi là ai? | "...gửi 25 RM của Vùng miền Nam, đang thiếu 1.200 tỷ CASA quý 4..." |
+| **Nguồn** | Dựa trên tài liệu nào? | "...dựa trên file /Báo cáo KPI tháng 9..." |
+| **Kỳ vọng** | Kết quả trông như thế nào? | "...giọng động viên, dưới 150 chữ, kết thúc bằng 3 việc cần làm trong tuần." |
+
+### Ví dụ ghép đủ 4 thành phần
+
+> **PROMPT:**
+>
+> Soạn email nhắc chỉ tiêu CASA quý 4 gửi 25 RM của Vùng miền Nam, hiện còn thiếu 1.200 tỷ đồng so với kế hoạch. Dựa trên số liệu trong file /Báo cáo KPI tháng 9. Giọng động viên, dưới 150 chữ, kết thúc bằng 3 việc cụ thể cần làm trong tuần này.
+
+> [!TIP]
+> Không cần đủ 4 thành phần trong mọi prompt. Với việc đơn giản, một câu là đủ. Khi kết quả chưa sát ý, hãy bổ sung thành phần còn thiếu.
 
 ---
 
-## Copilot nhìn thấy gì?
+## Hỏi tiếp để cải thiện
 
-### Nguyên tắc quan trọng nhất: Copilot chỉ thấy những gì anh/chị được phép xem
+Không cần viết prompt hoàn hảo ngay lần đầu. Hãy bắt đầu đơn giản rồi hỏi tiếp trong cùng cuộc trò chuyện:
 
-| Copilot có thể | Copilot không thể |
-|--------------------|------------------------|
-| Đọc email, lịch, chat của chính anh/chị | Đọc email của đồng nghiệp hay của RM khác |
-| Đọc file trên OneDrive/SharePoint anh/chị có quyền | Mở file anh/chị không được chia sẻ |
-| Dùng transcript cuộc họp anh/chị tham dự (đã bật transcript) | Truy cập cuộc họp anh/chị không tham dự |
-| Tìm thông tin công khai trên web (chế độ **Web**) | Đọc core banking, CRM, hệ thống thẻ... nếu ngân hàng chưa kết nối |
+| Lần | Prompt | Kết quả |
+|-----|--------|---------|
+| 1 | "Tóm tắt email chưa đọc." | Danh sách dài, khó biết việc nào gấp |
+| 2 | "Chỉ giữ email của khách hàng và RM, cho tôi biết việc cần làm." | Gọn hơn, có việc cần làm |
+| 3 | "Trình bày dạng bảng, thêm cột hạn chót, xếp việc gấp lên đầu." | Dùng được ngay để xử lý trong buổi sáng |
+
+Một số câu hỏi tiếp hay dùng: *"ngắn hơn"*, *"trình bày dạng bảng"*, *"thêm số liệu"*, *"giọng trang trọng hơn"*, *"viết lại cho khách hàng là người nước ngoài"*.
+
+---
+
+## 5 kỹ thuật nâng cao cho môi trường ngân hàng
+
+### 1. Giao vai cho Copilot
+
+Nói cho Copilot biết nó nên suy nghĩ như ai.
+
+> **PROMPT:**
+>
+> Bạn là chuyên viên Pháp chế và Tuân thủ của ngân hàng. Hãy đọc thư tư vấn này và chỉ ra những câu có thể bị khách hàng hiểu là cam kết lợi nhuận.
+
+### 2. Đặt ràng buộc an toàn
+
+Ngăn Copilot tự "điền" những thông tin chưa chắc chắn.
+
+> **PROMPT:**
+>
+> Soạn thư trả lời khách hàng về tiến độ phê duyệt hạn mức. Không nêu con số lãi suất hay hạn mức nào chưa có trong email. Chỗ nào chưa chắc chắn thì ghi [CẦN XÁC NHẬN].
+
+### 3. Yêu cầu trích dẫn nguồn
+
+Giúp anh/chị kiểm tra nhanh câu trả lời đến từ đâu.
+
+> **PROMPT:**
+>
+> Phí chuyển tiền quốc tế cho khách hàng hạng Platinum là bao nhiêu? Trả lời dựa trên file /Sổ tay Sản phẩm và ghi rõ mục tham chiếu. Nếu tài liệu không có thông tin, hãy nói rõ là không có.
+
+### 4. Bảo Copilot hỏi lại khi thiếu thông tin
+
+Tránh để Copilot đoán.
+
+> **PROMPT:**
+>
+> Tôi cần soạn tờ trình xin phê duyệt ngoại lệ hạn mức thấu chi cho một khách hàng Platinum. Trước khi viết, hãy hỏi tôi những thông tin còn thiếu.
+
+### 5. Đưa mẫu đầu ra
+
+Khi cần kết quả theo đúng định dạng quen thuộc, hãy cho Copilot xem một ví dụ.
+
+> **PROMPT:**
+>
+> Tóm tắt cuộc họp giao ban theo đúng mẫu sau cho từng RM: "RM [tên] - Cam kết: [nội dung] - Hạn: [ngày] - Cần hỗ trợ: [có/không]".
+
+---
+
+## Đính kèm file và Prompt Gallery
+
+### Gõ "/" để chỉ đúng tài liệu
+
+- **Copilot Chat, Outlook, PowerPoint:** gõ `/` rồi chọn file trên OneDrive/SharePoint
+- **Word, Excel:** Copilot làm việc trực tiếp với file đang mở
+- Chỉ đúng file giúp Copilot không phải tự đoán và trả lời chính xác hơn
+
+### Prompt Gallery
+
+Microsoft có thư viện prompt mẫu để anh/chị tham khảo và lưu lại:
+
+- **Trong ứng dụng:** mở Copilot, xem các prompt gợi ý
+- **Online:** [Copilot Prompt Gallery](https://copilot.cloud.microsoft/prompts)
+- Prompt hay của mình có thể **lưu lại** và **chia sẻ** cho đội RM
+
+---
+
+## Thư viện prompt cho Exclusive Manager
+
+Bộ prompt theo nhịp làm việc trong ngày. Anh/chị có thể sao chép và chỉnh lại cho phù hợp.
+
+### Đầu ngày
+
+> **PROMPT:**
+>
+> Tóm tắt email chưa đọc từ hôm qua, chia thành: việc cần tôi phê duyệt hôm nay, khách hàng cần phản hồi, và thông tin chỉ để biết.
+
+### Trước khi gặp khách hàng
+
+> **PROMPT:**
+>
+> Chuẩn bị cho tôi cuộc họp [tên cuộc họp]: tóm tắt các email và tài liệu liên quan, những gì đã hứa với khách hàng, và 3 câu hỏi nên hỏi.
+
+### Sau cuộc họp với đội RM
+
+> **PROMPT:**
+>
+> Liệt kê các cam kết của từng RM trong cuộc họp vừa rồi, kèm chỉ tiêu và thời hạn, đánh dấu cam kết chưa có thời hạn rõ ràng.
+
+### Cuối tuần
+
+> **PROMPT:**
+>
+> Tóm tắt những việc quan trọng tôi đã xử lý trong tuần qua dựa trên email, cuộc họp và tài liệu, và liệt kê các việc còn tồn để chuyển sang tuần sau.
+
+---
+
+## Thực hành nhanh
+
+Mở [Copilot Chat](https://m365.cloud.microsoft/) ở chế độ **Work** và thử hai prompt dưới đây với dữ liệu của chính anh/chị:
+
+> **PROMPT:**
+>
+> Tuần này tôi có những cuộc họp nào và cần chuẩn bị gì cho từng cuộc họp?
+
+> **PROMPT:**
+>
+> Những việc nào tôi đã hứa với người khác trong email 7 ngày qua mà chưa hoàn thành?
 
 > [!NOTE]
-> Copilot tuân theo đúng mô hình phân quyền Microsoft 365 hiện có của ngân hàng. Copilot không cấp thêm quyền cho ai, nó chỉ giúp anh/chị **tìm nhanh hơn** những gì anh/chị vốn đã có quyền xem.
-
-### Rủi ro thật sự: tài liệu đang được chia sẻ quá rộng
-
-Vì Copilot tìm kiếm rất giỏi, những tài liệu **đang bị chia sẻ sai** sẽ dễ bị tìm thấy hơn trước. Ví dụ:
-
-- File "Danh sách khách hàng Diamond.xlsx" để quyền **Everyone** trên SharePoint: mọi nhân viên đều có quyền xem, và Copilot của họ cũng tìm thấy.
-- Link chia sẻ **"Anyone with the link"** gửi cho đối tác từ năm trước vẫn còn hiệu lực.
-- Thư mục của một Trung tâm Exclusive mở quyền cho toàn bộ Khối thay vì chỉ RM của trung tâm đó.
-
-> [!TIP]
-> Trước khi triển khai Copilot rộng rãi, mỗi Trung tâm nên rà soát quyền chia sẻ các thư mục chứa danh mục khách hàng. Nguyên tắc: **chia sẻ đúng người, đúng việc** (need-to-know).
-
-### Nhãn phân loại tài liệu (sensitivity label)
-
-Khi tài liệu được gắn nhãn như **Nội bộ**, **Mật**, **Tuyệt mật**:
-
-- Copilot tôn trọng các giới hạn mà nhãn đặt ra
-- Tài liệu Copilot tạo ra từ một file **Mật** thường được gắn nhãn **Mật** theo
-- Nhờ đó, bản tóm tắt hay bộ slide được tạo từ báo cáo Mật không vô tình bị gửi ra ngoài như tài liệu thường
-
----
-
-## Câu hỏi thường gặp về bảo mật
-
-| Câu hỏi | Trả lời |
-|---------|---------|
-| Dữ liệu của ngân hàng có được dùng để huấn luyện AI không? | **Không.** Prompt, câu trả lời và dữ liệu trong Microsoft 365 của ngân hàng không được dùng để huấn luyện các mô hình nền tảng. |
-| Đồng nghiệp có xem được prompt của tôi không? | **Không.** Lịch sử trò chuyện với Copilot chỉ hiển thị với anh/chị. |
-| Ngân hàng có lưu lại các tương tác với Copilot không? | Có thể. Ngân hàng có thể ghi nhật ký và lưu giữ tương tác với Copilot theo chính sách tuân thủ, phục vụ kiểm toán. |
-| Khi Copilot tìm trên web, dữ liệu nội bộ có bị gửi ra ngoài không? | Copilot chỉ gửi một **truy vấn tìm kiếm rút gọn** tới Bing, không gửi nguyên tài liệu. Ngân hàng có thể tắt tính năng tìm kiếm web nếu cần. |
-| Copilot có đọc được hệ thống core banking hay CRM không? | Chỉ khi ngân hàng chủ động kết nối qua **Copilot connectors** và phân quyền. Mặc định là không. |
-| Copilot Chat miễn phí khác gì Microsoft 365 Copilot? | Copilot Chat chủ yếu dùng thông tin web và file anh/chị đưa vào. Microsoft 365 Copilot (có licence) làm việc trực tiếp trong Outlook, Teams, Word, Excel và dùng dữ liệu công việc của anh/chị. |
-
----
-
-## Giới hạn của Copilot
-
-| Giới hạn | Ví dụ trong ngân hàng | Cách xử lý |
-|----------|-----------------------|------------|
-| **Có thể trả lời sai một cách tự tin** | Đưa ra mức phí chuyển tiền hoặc lãi suất "nghe hợp lý" nhưng không có trong biểu phí | Yêu cầu trích dẫn nguồn, đối chiếu tài liệu gốc |
-| **Không có số liệu thời gian thực** | Không biết số dư hay tỷ giá hiện tại của khách hàng | Dùng hệ thống nghiệp vụ cho số liệu giao dịch |
-| **Phụ thuộc vào dữ liệu nguồn** | File Excel thiếu dữ liệu thì phân tích cũng thiếu | Định dạng dữ liệu thành Table, kiểm tra dữ liệu trước |
-| **Không thay thế phán đoán nghiệp vụ** | Không quyết định cấp tín dụng hay tư vấn đầu tư thay RM | Copilot gợi ý, con người quyết định |
-| **Giới hạn độ dài** | Tài liệu quá dài có thể bị tóm tắt thiếu ý | Chia nhỏ yêu cầu, chỉ rõ phần cần đọc |
-
-> [!TIP]
-> Hãy coi Copilot như **một chuyên viên mới rất nhanh nhẹn**: làm nháp tốt, tìm kiếm giỏi, nhưng mọi thứ gửi khách hàng hay trình lãnh đạo đều cần anh/chị duyệt.
-
----
-
-## Bản đồ Copilot trong workshop
-
-| Công cụ | Dùng để làm gì | Lab |
-|---------|----------------|-----|
-| **Copilot trong Word, Excel, PowerPoint** | Soạn thảo, phân tích, trình bày trên tài liệu đang mở | Lab 1, 2, 3 |
-| **Copilot trong Outlook, Teams** | Xử lý email, cuộc họp, chat | Lab 4, 5 |
-| **Researcher** | Nghiên cứu chuyên sâu nhiều bước từ web và tài liệu nội bộ | Lab 6 |
-| **Analyst** | Phân tích dữ liệu bằng code, thống kê, biểu đồ | Lab 7 |
-| **Agent Builder** | Tự tạo trợ lý AI riêng cho đội ngũ | Lab 8 |
-
-### Work hay Web?
-
-Trong Copilot Chat có nút chuyển **Work / Web**:
-
-- **Work**: trả lời dựa trên email, file, cuộc họp anh/chị có quyền truy cập. Dùng cho công việc hằng ngày.
-- **Web**: trả lời dựa trên thông tin công khai trên internet. Dùng khi cần kiến thức chung, tin tức thị trường.
+> Hai prompt trên chỉ dùng dữ liệu anh/chị có quyền xem. Nếu kết quả trống, có thể do hộp thư hoặc lịch chưa có nhiều dữ liệu, hãy thử với khoảng thời gian dài hơn.
 
 ---
 
 ## Tóm lại
 
-1. Copilot = mô hình AI + dữ liệu công việc (Microsoft Graph) + ứng dụng Microsoft 365
-2. Copilot chỉ thấy những gì anh/chị có quyền xem, nên **phân quyền tài liệu đúng** là nền tảng an toàn
-3. Dữ liệu của ngân hàng không được dùng để huấn luyện mô hình
-4. Copilot có thể sai: luôn kiểm tra trích dẫn và số liệu trước khi dùng
+| Nguyên tắc | Ý chính |
+|------------|---------|
+| **Rõ ràng** | Mục tiêu, ngữ cảnh, nguồn, kỳ vọng |
+| **Hỏi tiếp** | Bắt đầu đơn giản, chỉnh dần trong cùng cuộc trò chuyện |
+| **An toàn** | Giao vai, ràng buộc, yêu cầu trích dẫn, bảo Copilot hỏi lại |
+| **Chỉ đúng nguồn** | Gõ "/" để đính kèm file |
+| **Dùng lại** | Lưu prompt hay vào Prompt Gallery và chia sẻ cho đội |
 
-Tiếp theo: **[Module 3 - Viết prompt hiệu quả](#module-3)**.
+Tiếp theo: **[Module 3 - Personalization in Copilot](#module-3)**, để Copilot nhớ cách anh/chị làm việc.

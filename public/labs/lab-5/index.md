@@ -1,9 +1,9 @@
-# Lab 5 - Copilot trong Teams
+# Lab 5 - Copilot trong Outlook
 
-**Thời lượng:** 10 phút | **Ứng dụng:** Teams
+**Ứng dụng:** Outlook
 
 > [!NOTE]
-> **Ngân hàng TMCP Minh Khang (MKB) là ngân hàng giả tưởng.** Toàn bộ tên ngân hàng, nhân vật, khách hàng, số liệu và tài liệu trong lab chỉ phục vụ mục đích minh họa, không liên quan đến bất kỳ tổ chức có thật nào.
+> **Toàn bộ tài liệu, số liệu và tình huống trong workshop là bản nháp (draft) dùng cho mục đích đào tạo.** Tên nhân vật, khách hàng và đối tác là giả định.
 
 ---
 
@@ -11,99 +11,102 @@
 
 Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
-- Bắt kịp cuộc họp khi vào muộn mà không làm gián đoạn người khác
-- Phát hiện những điểm còn bất đồng trước khi cuộc họp kết thúc
-- Họp với đối tác nước ngoài bằng phụ đề dịch và Interpreter
+- Biến hộp thư thành danh sách việc cần quyết định, xếp theo mức độ ưu tiên
+- Nắm nhanh một chuỗi email leo thang nhiều người tham gia và xử lý ở cấp quản lý
+- Chuẩn bị cho buổi gặp khách hàng hoặc đối tác quan trọng trong vài phút
 
 ### Tính năng chính
 
 | Tính năng | Mô tả |
 |-----------|--------|
-| **Recap** | Tóm tắt cuộc họp, trả lời câu hỏi về nội dung đã thảo luận |
-| **Translated Live Captions** | Phụ đề được dịch theo thời gian thực |
-| **Interpreter** | Thông dịch trực tiếp giọng nói sang ngôn ngữ đã chọn |
+| **Email Summarizing** | Tóm tắt, phân loại email và các chuỗi trao đổi dài |
+| **Email Drafting & Coaching** | Soạn thư và góp ý giọng điệu cho thư nhạy cảm |
+| **Meeting Prep** | Tổng hợp email, tài liệu, cuộc họp trước liên quan để chuẩn bị cho buổi gặp |
 
 ---
 
 ## Tình huống
 
-> **Chị Nguyễn Thu Trang** - *Exclusive RM phụ trách Đối tác Quốc tế, MKB*
+> **Anh Trần Quốc Tuấn** - *Giám đốc Khối Exclusive Banking Vùng*
 >
-> Chị Trang vào muộn 15 phút cuộc họp với một công ty quản lý quỹ ở Singapore và một hãng bảo hiểm ở Đức về sản phẩm wealth management và bancassurance dành cho khách hàng Exclusive. Chị cần nắm ngay những gì đã quyết, biết điểm nào hai bên còn chưa thống nhất để kịp đặt câu hỏi, và theo dõi được phần trình bày bằng tiếng Anh, tiếng Đức của đối tác.
-
-> [!NOTE]
-> Copilot trong cuộc họp cần **bật transcript** (ghi lời thoại). Theo quy định sử dụng AI của MKB, với cuộc họp có khách hàng hoặc đối tác bên ngoài, người chủ trì phải **thông báo và được các bên đồng ý** trước khi bật Recording & Transcription.
+> Đầu giờ sáng, hộp thư của anh Tuấn có hàng chục email: Giám đốc Trung tâm xin phê duyệt ngoại lệ, các khối nghiệp vụ gửi chỉ tiêu, và một khiếu nại của khách hàng VIP đã chuyển qua nhiều người nhưng chưa được xử lý dứt điểm. Chiều nay anh có buổi gặp một khách hàng Diamond. Anh dùng Copilot trong Outlook để quyết định việc gì trước, xử lý vụ leo thang và vào buổi gặp với đầy đủ thông tin.
 
 > [!TIP]
-> Lab này thực hành trên **một cuộc họp Teams có thật** của anh/chị (đã bật transcript), ví dụ buổi giao ban RM.
+> Lab này thực hành trực tiếp trên **hộp thư và lịch của anh/chị**. Khi trình chiếu, chọn những email không chứa thông tin định danh khách hàng.
 
 ---
 
-### Bài tập 1: Vào họp muộn, bắt kịp trong 30 giây
+### Bài tập 1: Hộp thư thành danh sách quyết định
 
 **Cách thực hiện:**
 
-1. Tham gia một cuộc họp Teams đã bật transcript
-2. Nhấn nút **Copilot** trên thanh công cụ cuộc họp
+1. Mở **Outlook** (bản mới hoặc Outlook on the web)
+2. Bấm biểu tượng **Copilot** trên thanh công cụ
 3. Nhập prompt:
 
 > **PROMPT:**
 >
-> Tôi vừa vào cuộc họp. Trong 3 câu, cho tôi biết đã quyết định những gì, ai đang phụ trách việc gì, và hiện mọi người đang thảo luận vấn đề nào.
+> Xem các email tôi nhận trong 3 ngày qua và chia thành 3 nhóm: (1) Cần tôi quyết định hoặc phê duyệt hôm nay, (2) Có thể giao cho cấp dưới xử lý, (3) Chỉ để biết. Mỗi email một dòng gồm người gửi, việc cần làm và hạn chót nếu có. Ở nhóm 2, gợi ý nên giao cho ai dựa trên nội dung email.
 
-### Bài tập 2: Tìm điểm còn bất đồng
+**Kết quả mong đợi:** Danh sách 3 nhóm, nhìn vào biết ngay việc cần tự quyết trong ngày và việc có thể giao lại.
+
+### Bài tập 2: Xử lý chuỗi email leo thang
+
+1. Mở một chuỗi email dài có nhiều người tham gia (ví dụ một khiếu nại hoặc một đề nghị đã qua nhiều bộ phận)
+2. Chọn **Summary by Copilot** ở đầu email, rồi mở khung Copilot và nhập:
 
 > **PROMPT:**
 >
-> Trong cuộc họp này, có vấn đề nào các bên chưa thống nhất hoặc câu hỏi nào chưa được trả lời không? Ai đang giữ quan điểm nào? Gợi ý cho tôi một câu hỏi để chốt lại từng vấn đề.
+> Tóm tắt chuỗi email này cho tôi ở góc độ người quản lý: vấn đề gốc là gì, ai đã làm gì và khi nào, điều gì đang bị tắc và vì sao, và rủi ro nếu không xử lý trong tuần này. Sau đó đề xuất tôi nên quyết định gì.
 
-**Kết quả mong đợi:** Danh sách vấn đề còn mở kèm quan điểm của từng bên, giúp anh/chị chủ động chốt trước khi cuộc họp kết thúc.
+3. Soạn phản hồi bằng **Draft with Copilot**:
 
-### Bài tập 3: Bật Translated Live Captions
-
-1. Trên thanh công cụ cuộc họp, chọn **More (...)** > **Language and speech** > **Turn on live captions**
-2. Mở **Captions settings** > **Translate to**, chọn **Vietnamese**
-3. Đổi sang **English** hoặc **Chinese (Simplified)** để thấy phụ đề thay đổi theo thời gian thực
-
-### Bài tập 4: Bật Interpreter
-
-1. Trên thanh công cụ cuộc họp, chọn **More (...)** > **Language and speech** > **Interpreter**
-2. Chọn **Choose interpretation language** - ngôn ngữ anh/chị muốn nghe
-3. Điều chỉnh âm lượng giữa giọng gốc và giọng thông dịch
+> **PROMPT:**
+>
+> Soạn thư phản hồi với tư cách Giám đốc Khối: ghi nhận vấn đề, nêu rõ người chịu trách nhiệm xử lý và thời hạn, cam kết cập nhật tiếp theo. Giọng điềm tĩnh, dứt khoát. Chỗ nào chưa chắc chắn ghi [CẦN XÁC NHẬN].
 
 > [!TIP]
-> Interpreter giúp người tham dự nước ngoài nghe bằng ngôn ngữ của họ mà không cần phiên dịch viên.
+> Với thư nhạy cảm (khiếu nại khách hàng VIP, phản hồi cấp trên), hãy dùng **Coaching by Copilot** để được góp ý về giọng điệu và cảm nhận của người đọc trước khi gửi.
+
+### Bài tập 3: Chuẩn bị cho buổi gặp khách hàng quan trọng
+
+1. Chọn một cuộc họp sắp tới trong **Lịch**
+2. Mở **Copilot** và nhập:
+
+> **PROMPT:**
+>
+> Chuẩn bị cho tôi cuộc họp [tên cuộc họp]. Tóm tắt các email, tài liệu và cuộc họp trước có liên quan, những gì ngân hàng đã hứa, các vấn đề còn mở, và gợi ý 3 câu hỏi tôi nên hỏi cùng 1 điều tôi nên tránh nói. Đọc được trong 2 phút.
+
+**Kết quả mong đợi:** Một bản brief ngắn gồm bối cảnh, cam kết trước đó, việc còn mở và câu hỏi gợi ý, kèm liên kết tới email và tài liệu nguồn.
 
 ---
 
 ## Lưu ý tuân thủ
 
 > [!NOTE]
-> Chỉ bật Recording và Transcription sau khi đã thông báo và được người tham dự bên ngoài đồng ý. Transcript cuộc họp có khách hàng là dữ liệu Mật, chỉ lưu trong Teams/SharePoint của ngân hàng. Biên bản do Copilot tạo phải được người chủ trì rà soát trước khi gửi.
+> Copilot chỉ soạn nháp, người gửi chịu trách nhiệm nội dung. Không cam kết lãi suất, hạn mức khi chưa có phê duyệt. Không chuyển tiếp email chứa thông tin khách hàng ra địa chỉ ngoài ngân hàng.
 
 ---
 
-## Prompt đề xuất - Teams
+## Prompt đề xuất - Outlook
 
-### Teams - Recap
-
-> **PROMPT:**
->
-> 1. Có nội dung nào trong cuộc họp yêu cầu tôi thực hiện hoặc phản hồi không?
-> 2. Tóm tắt các câu hỏi và trả lời trong phần Q&A, đánh dấu câu nào chưa được trả lời đầy đủ.
-> 3. Đối tác đã đưa ra những con số nào (phí, thời gian, chỉ tiêu)? Liệt kê kèm thời điểm được nhắc trong cuộc họp.
-
-### Teams - Follow-up
+### Điều hành và giao việc
 
 > **PROMPT:**
 >
-> Soạn email follow-up gửi các bên sau cuộc họp: cảm ơn, tóm tắt 3 quyết định chính, bảng việc cần làm gồm Việc | Người phụ trách | Thời hạn, và đề xuất thời gian họp tiếp theo.
+> Soạn email giao việc cho các Giám đốc Trung tâm về kế hoạch tăng CASA quý 4: mục tiêu của từng trung tâm, 3 việc cần làm trong tuần, hạn báo cáo kết quả. Nếu tôi chưa cung cấp đủ số liệu, hãy hỏi lại trước khi viết.
 
-### Teams - Chat Summarizing
+### Theo dõi cam kết
 
 > **PROMPT:**
 >
-> Tóm tắt các trao đổi trong nhóm chat RM của Trung tâm trong 7 ngày qua: vấn đề khách hàng nổi bật, câu hỏi chưa được trả lời và việc tôi cần quyết định.
+> Những việc nào tôi đã hứa với Ban Điều hành hoặc khách hàng trong email 2 tuần qua mà chưa hoàn thành? Liệt kê người nhận, nội dung đã hứa và ngày hứa.
+
+### Sau thời gian vắng mặt
+
+> **PROMPT:**
+>
+> Tôi vừa đi công tác 5 ngày. Tóm tắt những gì quan trọng tôi đã bỏ lỡ: quyết định đã được đưa ra, việc đang chờ tôi, và vấn đề nào cần tôi can thiệp ngay.
 
 ---
 
@@ -111,6 +114,6 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 | Anh/chị đã học được | Tính năng |
 |---------------------|-----------|
-| Bắt kịp cuộc họp và tìm điểm còn bất đồng | Recap |
-| Xem phụ đề được dịch theo thời gian thực | Translated Live Captions |
-| Nghe cuộc họp bằng ngôn ngữ mong muốn | Interpreter |
+| Phân loại hộp thư theo việc cần quyết và việc có thể giao | Email Summarizing |
+| Xử lý chuỗi email leo thang ở cấp quản lý | Summarizing + Drafting & Coaching |
+| Chuẩn bị cho buổi gặp khách hàng quan trọng | Meeting Prep |

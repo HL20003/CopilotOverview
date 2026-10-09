@@ -1,6 +1,7 @@
-# Module 3 - Viết prompt hiệu quả
+# Module 3 - Personalization in Copilot
 
-**Thời lượng:** 20 phút
+> [!NOTE]
+> **Toàn bộ tài liệu, số liệu và tình huống trong workshop là bản nháp (draft) dùng cho mục đích đào tạo.** Tên nhân vật, khách hàng và đối tác là giả định.
 
 ---
 
@@ -8,165 +9,100 @@
 
 Sau module này, anh/chị sẽ:
 
-- Viết prompt rõ ràng theo công thức 4 thành phần
-- Biết cách hỏi tiếp để cải thiện kết quả thay vì viết lại từ đầu
-- Dùng 5 kỹ thuật giúp câu trả lời an toàn và chính xác hơn trong môi trường ngân hàng
-- Có sẵn bộ prompt mẫu cho công việc hằng ngày của Exclusive Manager
+- Biết **Customize Copilot** là gì và vì sao người quản lý nên thiết lập
+- Viết được hướng dẫn cá nhân để mọi câu trả lời của Copilot đúng vai trò và phong cách của mình
+- Dùng các gợi ý có sẵn và kiểm tra hiệu quả sau khi lưu
 
 ---
 
-## Prompt là gì?
+## Customize Copilot là gì?
 
-**Prompt** là yêu cầu anh/chị gửi cho Copilot bằng ngôn ngữ tự nhiên, giống như giao việc cho một trợ lý. Giao việc càng rõ, kết quả càng sát ý.
+**Customize Copilot** là nơi anh/chị cho Copilot biết **mình là ai** và **muốn nhận câu trả lời như thế nào**. Hướng dẫn này được áp dụng cho mọi cuộc trò chuyện sau đó, nên anh/chị không phải nhắc lại cùng một ngữ cảnh trong từng prompt.
 
-| Prompt chưa tốt | Prompt tốt hơn |
-|-----------------|----------------|
-| "Trả lời email này." | "Soạn thư trả lời khách hàng hạng Platinum đang hỏi lịch tư vấn danh mục, đề xuất 2 khung giờ tuần sau, giọng lịch sự và ngắn gọn." |
-| "Tóm tắt báo cáo." | "Tóm tắt báo cáo KPI quý 3 thành 5 ý cho Ban Điều hành, mỗi ý có một con số cụ thể." |
-| "Vẽ biểu đồ." | "Tạo biểu đồ cột tỷ lệ CASA theo trung tâm, sắp xếp giảm dần, tiêu đề nêu trung tâm thấp nhất." |
-
----
-
-## Công thức 4 thành phần
-
-| Thành phần | Câu hỏi tự đặt ra | Ví dụ |
-|------------|-------------------|-------|
-| **Mục tiêu** | Tôi cần Copilot làm gì? | "Soạn email nhắc chỉ tiêu..." |
-| **Ngữ cảnh** | Cho ai, để làm gì, tôi là ai? | "...gửi 25 RM của Vùng miền Nam, đang thiếu 1.200 tỷ CASA quý 4..." |
-| **Nguồn** | Dựa trên tài liệu nào? | "...dựa trên file /Báo cáo KPI tháng 9..." |
-| **Kỳ vọng** | Kết quả trông như thế nào? | "...giọng động viên, dưới 150 chữ, kết thúc bằng 3 việc cần làm trong tuần." |
-
-### Ví dụ ghép đủ 4 thành phần
-
-> **PROMPT:**
->
-> Soạn email nhắc chỉ tiêu CASA quý 4 gửi 25 RM của Vùng miền Nam, hiện còn thiếu 1.200 tỷ đồng so với kế hoạch. Dựa trên số liệu trong file /Báo cáo KPI tháng 9. Giọng động viên, dưới 150 chữ, kết thúc bằng 3 việc cụ thể cần làm trong tuần này.
-
-> [!TIP]
-> Không cần đủ 4 thành phần trong mọi prompt. Với việc đơn giản, một câu là đủ. Khi kết quả chưa sát ý, hãy bổ sung thành phần còn thiếu.
+| Không thiết lập | Đã thiết lập |
+|-----------------|--------------|
+| Mỗi lần hỏi phải nhắc: "tôi là Giám đốc Khối, trả lời ngắn gọn, dùng bảng, đơn vị tỷ đồng..." | Chỉ cần hỏi: "Tóm tắt tình hình tuần này", Copilot tự trả lời đúng phong cách |
+| Câu trả lời dài, chung chung, phải chỉnh lại nhiều lần | Câu trả lời đi thẳng vào ý chính, có quyết định cần có |
 
 ---
 
-## Hỏi tiếp để cải thiện
+## Mở Customize Copilot
 
-Không cần viết prompt hoàn hảo ngay lần đầu. Hãy bắt đầu đơn giản rồi hỏi tiếp trong cùng cuộc trò chuyện:
+1. Mở [Copilot Chat](https://m365.cloud.microsoft/) bằng tài khoản công ty
+2. Bấm vào ảnh đại diện hoặc biểu tượng **...**, chọn **Settings**
+3. Chọn **Personalization** ở cột bên trái
+4. Tại dòng **Customize Copilot**, bật công tắc bên phải rồi bấm **Manage**
 
-| Lần | Prompt | Kết quả |
-|-----|--------|---------|
-| 1 | "Tóm tắt email chưa đọc." | Danh sách dài, khó biết việc nào gấp |
-| 2 | "Chỉ giữ email của khách hàng và RM, cho tôi biết việc cần làm." | Gọn hơn, có việc cần làm |
-| 3 | "Trình bày dạng bảng, thêm cột hạn chót, xếp việc gấp lên đầu." | Dùng được ngay để xử lý trong buổi sáng |
+Màn hình **Customize Copilot** gồm 3 phần:
 
-Một số câu hỏi tiếp hay dùng: *"ngắn hơn"*, *"trình bày dạng bảng"*, *"thêm số liệu"*, *"giọng trang trọng hơn"*, *"viết lại cho khách hàng là người nước ngoài"*.
-
----
-
-## 5 kỹ thuật nâng cao cho môi trường ngân hàng
-
-### 1. Giao vai cho Copilot
-
-Nói cho Copilot biết nó nên suy nghĩ như ai.
-
-> **PROMPT:**
->
-> Bạn là chuyên viên Pháp chế và Tuân thủ của ngân hàng. Hãy đọc thư tư vấn này và chỉ ra những câu có thể bị khách hàng hiểu là cam kết lợi nhuận.
-
-### 2. Đặt ràng buộc an toàn
-
-Ngăn Copilot tự "điền" những thông tin chưa chắc chắn.
-
-> **PROMPT:**
->
-> Soạn thư trả lời khách hàng về tiến độ phê duyệt hạn mức. Không nêu con số lãi suất hay hạn mức nào chưa có trong email. Chỗ nào chưa chắc chắn thì ghi [CẦN XÁC NHẬN].
-
-### 3. Yêu cầu trích dẫn nguồn
-
-Giúp anh/chị kiểm tra nhanh câu trả lời đến từ đâu.
-
-> **PROMPT:**
->
-> Phí chuyển tiền quốc tế cho khách hàng hạng Platinum là bao nhiêu? Trả lời dựa trên file /Sổ tay Sản phẩm và ghi rõ mục tham chiếu. Nếu tài liệu không có thông tin, hãy nói rõ là không có.
-
-### 4. Bảo Copilot hỏi lại khi thiếu thông tin
-
-Tránh để Copilot đoán.
-
-> **PROMPT:**
->
-> Tôi cần soạn tờ trình xin phê duyệt ngoại lệ hạn mức thấu chi cho một khách hàng Platinum. Trước khi viết, hãy hỏi tôi những thông tin còn thiếu.
-
-### 5. Đưa mẫu đầu ra
-
-Khi cần kết quả theo đúng định dạng quen thuộc, hãy cho Copilot xem một ví dụ.
-
-> **PROMPT:**
->
-> Tóm tắt cuộc họp giao ban theo đúng mẫu sau cho từng RM: "RM [tên] - Cam kết: [nội dung] - Hạn: [ngày] - Cần hỗ trợ: [có/không]".
-
----
-
-## Đính kèm file và Prompt Gallery
-
-### Gõ "/" để chỉ đúng tài liệu
-
-- **Copilot Chat, Outlook, PowerPoint:** gõ `/` rồi chọn file trên OneDrive/SharePoint
-- **Word, Excel:** Copilot làm việc trực tiếp với file đang mở
-- Chỉ đúng file giúp Copilot không phải tự đoán và trả lời chính xác hơn
-
-### Prompt Gallery
-
-Microsoft có thư viện prompt mẫu để anh/chị tham khảo và lưu lại:
-
-- **Trong ứng dụng:** mở Copilot, xem các prompt gợi ý
-- **Online:** [Copilot Prompt Gallery](https://copilot.cloud.microsoft/prompts)
-- Prompt hay của mình có thể **lưu lại** và **chia sẻ** cho đội RM
-
----
-
-## Thư viện prompt cho Exclusive Manager
-
-Bộ prompt theo nhịp làm việc trong ngày. Anh/chị có thể sao chép và chỉnh lại cho phù hợp.
-
-### Đầu ngày
-
-> **PROMPT:**
->
-> Tóm tắt email chưa đọc từ hôm qua, chia thành: việc cần tôi phê duyệt hôm nay, khách hàng cần phản hồi, và thông tin chỉ để biết.
-
-### Trước khi gặp khách hàng
-
-> **PROMPT:**
->
-> Chuẩn bị cho tôi cuộc họp [tên cuộc họp]: tóm tắt các email và tài liệu liên quan, những gì đã hứa với khách hàng, và 3 câu hỏi nên hỏi.
-
-### Sau cuộc họp với đội RM
-
-> **PROMPT:**
->
-> Liệt kê các cam kết của từng RM trong cuộc họp vừa rồi, kèm chỉ tiêu và thời hạn, đánh dấu cam kết chưa có thời hạn rõ ràng.
-
-### Cuối tuần
-
-> **PROMPT:**
->
-> Tóm tắt những việc quan trọng tôi đã xử lý trong tuần qua dựa trên email, cuộc họp và tài liệu, và liệt kê các việc còn tồn để chuyển sang tuần sau.
-
----
-
-## Thực hành nhanh
-
-Mở [Copilot Chat](https://m365.cloud.microsoft/) ở chế độ **Work** và thử hai prompt dưới đây với dữ liệu của chính anh/chị:
-
-> **PROMPT:**
->
-> Tuần này tôi có những cuộc họp nào và cần chuẩn bị gì cho từng cuộc họp?
-
-> **PROMPT:**
->
-> Những việc nào tôi đã hứa với người khác trong email 7 ngày qua mà chưa hoàn thành?
+| Phần | Dùng để làm gì |
+|------|----------------|
+| **Ô nhập hướng dẫn** | Viết thông tin về anh/chị và cách anh/chị muốn Copilot trả lời |
+| **Các gợi ý có sẵn** | Bấm để thêm nhanh một hướng dẫn mẫu vào ô nhập; bấm biểu tượng làm mới để xem thêm gợi ý |
+| **Save customization** | Lưu hướng dẫn, áp dụng cho các cuộc trò chuyện tiếp theo |
 
 > [!NOTE]
-> Hai prompt trên chỉ dùng dữ liệu anh/chị có quyền xem. Nếu kết quả trống, có thể do hộp thư hoặc lịch chưa có nhiều dữ liệu, hãy thử với khoảng thời gian dài hơn.
+> Tính năng có thể do quản trị viên Microsoft 365 của ngân hàng bật hoặc tắt. Nếu không thấy mục **Customize Copilot**, hãy hỏi người hướng dẫn.
+
+---
+
+## Các gợi ý có sẵn phù hợp với người quản lý
+
+Màn hình có sẵn một số gợi ý. Những gợi ý dưới đây đặc biệt hữu ích với Exclusive Manager:
+
+| Gợi ý | Tác dụng | Khi nào hữu ích |
+|-------|----------|-----------------|
+| **Give honest feedback** | Copilot góp ý thẳng thắn, chỉ ra điểm yếu thay vì chỉ khen | Rà soát tờ trình, kế hoạch trước khi trình lãnh đạo |
+| **Use clear and simple language** | Câu chữ rõ ràng, dễ hiểu | Soạn thông điệp gửi đội RM hoặc khách hàng |
+| **Prioritize my manager** | Ưu tiên email, yêu cầu từ cấp trên trực tiếp | Không bỏ sót việc Ban Điều hành giao |
+| **Highlight decisions in meeting notes** | Làm nổi bật các quyết định trong tóm tắt cuộc họp | Theo dõi kết luận của các buổi giao ban, review danh mục |
+| **Focus on internal sources** | Ưu tiên tài liệu nội bộ của ngân hàng | Câu hỏi về sản phẩm, chính sách, quy trình |
+| **Use bullet points for summaries** | Tóm tắt dạng gạch đầu dòng | Đọc nhanh trên điện thoại giữa các cuộc họp |
+
+> [!TIP]
+> Bấm vào một gợi ý, nội dung sẽ được thêm vào ô nhập. Anh/chị có thể chỉnh lại câu chữ trước khi lưu.
+
+---
+
+## Viết hướng dẫn của riêng anh/chị
+
+Một hướng dẫn tốt trả lời 3 câu hỏi:
+
+| Câu hỏi | Ví dụ |
+|---------|-------|
+| **Tôi là ai, quản lý gì?** | Giám đốc Khối Khách hàng Ưu tiên, quản lý các Giám đốc Trung tâm và đội RM |
+| **Tôi muốn câu trả lời trông như thế nào?** | Tiếng Việt, ý chính trước, dùng bảng khi so sánh, đơn vị tỷ đồng |
+| **Điều gì Copilot không được làm?** | Không tự điền số liệu không có nguồn, không đưa ra cam kết thay tôi |
+
+**Mẫu hướng dẫn để sao chép và chỉnh lại:**
+
+> **PROMPT:**
+>
+> Tôi là Giám đốc Khối Khách hàng Ưu tiên của một ngân hàng, quản lý đội ngũ Giám đốc Trung tâm và RM, báo cáo trực tiếp cho Ban Điều hành. Các chỉ số tôi theo dõi là huy động, tỷ lệ CASA, AUM, dư nợ và chất lượng dịch vụ khách hàng VIP. Khi trả lời tôi: viết bằng tiếng Việt, ngắn gọn, ý chính trước, chi tiết sau; dùng bảng khi so sánh; số tiền ghi theo đơn vị tỷ đồng; khi đưa ra đề xuất thì nêu rõ quyết định cần có, người phụ trách và thời hạn. Góp ý thẳng thắn. Không tự điền số liệu không có trong nguồn, chỗ chưa chắc chắn ghi [CẦN XÁC NHẬN].
+
+> [!NOTE]
+> **Không đưa thông tin khách hàng hay số liệu kinh doanh chi tiết** vào hướng dẫn. Chỉ mô tả vai trò, phạm vi công việc và cách anh/chị muốn nhận câu trả lời.
+
+---
+
+## Thực hành
+
+1. Trước khi thiết lập, mở cuộc trò chuyện mới và hỏi câu dưới đây, **lưu lại kết quả** để so sánh:
+
+> **PROMPT:**
+>
+> Soạn khung báo cáo tuần này gửi Ban Điều hành dựa trên email và cuộc họp của tôi trong 7 ngày qua.
+
+2. Vào **Settings** > **Personalization** > **Customize Copilot** > **Manage**
+3. Dán mẫu hướng dẫn ở trên vào ô nhập, chỉnh lại cho đúng vai trò của anh/chị
+4. Bấm thêm các gợi ý **Highlight decisions in meeting notes** và **Focus on internal sources**
+5. Bấm **Save customization**
+6. Mở **cuộc trò chuyện mới**, hỏi lại đúng câu ở bước 1 và so sánh hai kết quả
+
+**Kết quả mong đợi:** Câu trả lời sau khi thiết lập ngắn gọn hơn, có bảng, có phần quyết định cần Ban Điều hành phê duyệt, và đánh dấu [CẦN XÁC NHẬN] ở những chỗ thiếu số liệu.
+
+> [!TIP]
+> Nếu kết quả chưa như ý, quay lại **Customize Copilot** để chỉnh. Hướng dẫn tốt thường được hoàn thiện sau 2-3 lần thử.
 
 ---
 
@@ -174,10 +110,9 @@ Mở [Copilot Chat](https://m365.cloud.microsoft/) ở chế độ **Work** và 
 
 | Nguyên tắc | Ý chính |
 |------------|---------|
-| **Rõ ràng** | Mục tiêu, ngữ cảnh, nguồn, kỳ vọng |
-| **Hỏi tiếp** | Bắt đầu đơn giản, chỉnh dần trong cùng cuộc trò chuyện |
-| **An toàn** | Giao vai, ràng buộc, yêu cầu trích dẫn, bảo Copilot hỏi lại |
-| **Chỉ đúng nguồn** | Gõ "/" để đính kèm file |
-| **Dùng lại** | Lưu prompt hay vào Prompt Gallery và chia sẻ cho đội |
+| **Thiết lập một lần** | Customize Copilot áp dụng cho mọi cuộc trò chuyện sau đó |
+| **Ba nội dung cốt lõi** | Mình là ai, muốn câu trả lời thế nào, điều gì không được làm |
+| **Dùng gợi ý có sẵn** | Thêm nhanh các hướng dẫn phổ biến rồi chỉnh lại |
+| **Không đưa dữ liệu nhạy cảm** | Chỉ mô tả vai trò và phong cách làm việc |
 
-Anh/chị đã sẵn sàng thực hành. Chuyển sang **[Lab 1 - Copilot trong Word](#lab-1)**.
+Tiếp theo: bắt đầu thực hành với **[Lab 1 - Copilot Chat](#lab-1)**.

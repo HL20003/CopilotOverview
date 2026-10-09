@@ -1,9 +1,9 @@
-# Lab 6 - Researcher Agent
+# Lab 6 - Copilot trong Teams
 
-**Thời lượng:** 10 phút | **Ứng dụng:** Microsoft 365 Copilot app - Researcher
+**Ứng dụng:** Teams
 
 > [!NOTE]
-> **Ngân hàng TMCP Minh Khang (MKB) là ngân hàng giả tưởng.** Toàn bộ tên ngân hàng, nhân vật, khách hàng, số liệu và tài liệu trong lab chỉ phục vụ mục đích minh họa, không liên quan đến bất kỳ tổ chức có thật nào.
+> **Toàn bộ tài liệu, số liệu và tình huống trong workshop là bản nháp (draft) dùng cho mục đích đào tạo.** Tên nhân vật, khách hàng và đối tác là giả định.
 
 ---
 
@@ -11,73 +11,114 @@
 
 Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
-- Giao cho Researcher một đề bài dạng câu hỏi chiến lược, không chỉ "nghiên cứu về..."
-- Định hình báo cáo theo người đọc thông qua câu hỏi làm rõ
-- Kết nối nghiên cứu bên ngoài với số liệu nội bộ để ra đề xuất hành động
+- Bắt kịp cuộc họp khi vào muộn và phát hiện những điểm còn bất đồng để chốt
+- Biến cuộc họp thành biên bản điều hành: quyết định, người phụ trách, thời hạn
+- Nắm nhanh những gì đang diễn ra trong các nhóm chat của đội ngũ
 
-**Researcher Agent** là một tác nhân AI của Microsoft 365 Copilot, chuyên nghiên cứu sâu, tổng hợp thông tin từ nhiều nguồn (web và tài liệu nội bộ) và đối chiếu với dữ liệu doanh nghiệp để đưa ra báo cáo phân tích chuyên sâu.
+### Tính năng chính
+
+| Tính năng | Mô tả |
+|-----------|--------|
+| **Copilot trong cuộc họp** | Hỏi đáp về nội dung cuộc họp đang diễn ra |
+| **Recap** | Tóm tắt sau cuộc họp, ghi chú và việc cần làm |
+| **Chat & Channel Summarizing** | Tóm tắt các cuộc trò chuyện nhóm và kênh |
 
 ---
 
 ## Tình huống
 
-> **Anh Lê Quốc Hưng** - *Giám đốc Rủi ro Tín dụng, Khối Khách hàng Ưu tiên, MKB*
+> **Chị Nguyễn Thu Trang** - *Giám đốc Trung tâm Exclusive*
 >
-> Ban Điều hành chuẩn bị chốt chiến lược Khối Khách hàng Ưu tiên năm 2027 và cần ý kiến của bộ phận Rủi ro: những thay đổi pháp lý gần đây ảnh hưởng thế nào tới cách Khối đang cho vay và bán chéo sản phẩm? Thay vì tự đọc hàng chục văn bản và bài phân tích, anh Hưng giao cho Researcher ba câu hỏi cụ thể, yêu cầu đối chiếu với số liệu quý 3 của Khối và trả về một memo có đề xuất.
+> Chị Trang vào muộn 15 phút buổi giao ban với các RM của trung tâm về kế hoạch tăng CASA quý 4. Chị cần nắm ngay những gì đã thống nhất, chốt các điểm còn tranh luận trước khi cuộc họp kết thúc, và sau đó có biên bản để theo dõi từng RM. Trong tuần, chị cũng cần biết nhóm chat của trung tâm đang có vấn đề gì cần mình xử lý.
 
-**Tệp đính kèm:** [MKB - Financial Analysis Q3 2026.xlsx](#file-financial)
+> [!NOTE]
+> Copilot trong cuộc họp cần **bật transcript** (ghi lời thoại). Với cuộc họp có khách hàng hoặc đối tác bên ngoài, người chủ trì phải **thông báo và được các bên đồng ý** trước khi bật Recording & Transcription.
 
-*Xem toàn bộ file demo tại trang [Giới thiệu và chuẩn bị](#module-1) và [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may).*
+> [!TIP]
+> Lab này thực hành trên **một cuộc họp Teams có thật** của anh/chị (đã bật transcript), ví dụ buổi giao ban với đội ngũ.
 
 ---
 
-### Bài tập 1: Giao đề bài nghiên cứu
+### Bài tập 1: Vào họp muộn, bắt kịp trong 30 giây
 
 **Cách thực hiện:**
 
-1. Truy cập [https://m365.cloud.microsoft/](https://m365.cloud.microsoft/) và đăng nhập bằng **tài khoản công ty** (tài khoản Microsoft 365 do công ty cấp) - **không dùng** tài khoản Microsoft cá nhân như Outlook.com, Hotmail
-2. Chọn **Researcher** trong mục Agents
-3. Đính kèm file [MKB - Financial Analysis Q3 2026.xlsx](#file-financial) (xem [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may))
-4. Nhập prompt:
+1. Tham gia một cuộc họp Teams đã bật transcript
+2. Nhấn nút **Copilot** trên thanh công cụ cuộc họp
+3. Nhập prompt:
 
 > **PROMPT:**
 >
-> Tôi cần chuẩn bị ý kiến của bộ phận Rủi ro cho chiến lược Khối Khách hàng Ưu tiên năm 2027. Hãy trả lời 3 câu hỏi:
-> 1. Trong 12 tháng qua, những quy định nào mới ban hành hoặc được siết lại ảnh hưởng tới cho vay, bán bảo hiểm qua ngân hàng (bancassurance) và phân phối sản phẩm đầu tư cho khách hàng cá nhân tại Việt Nam?
-> 2. Đặt cạnh số liệu trong file MKB - Financial Analysis Q3 2026.xlsx (sheet PL_Budget_Actual và Comps), Khối đang chịu rủi ro lớn nhất ở đâu so với các ngân hàng cùng nhóm?
-> 3. Đề xuất 3 điều chỉnh chiến lược, mỗi điều chỉnh nêu tác động dự kiến và mức độ ưu tiên.
->
-> Mỗi kết luận về quy định phải có trích dẫn nguồn.
+> Tôi vừa vào cuộc họp. Trong 3 câu, cho tôi biết đã quyết định những gì, ai đang phụ trách việc gì, và hiện mọi người đang thảo luận vấn đề nào.
 
-### Bài tập 2: Trả lời câu hỏi làm rõ
-
-Researcher sẽ hỏi lại để làm rõ phạm vi nghiên cứu. Đây là lúc định hình báo cáo theo người đọc. Trả lời:
+### Bài tập 2: Tìm điểm còn bất đồng để chốt
 
 > **PROMPT:**
 >
-> 12 tháng tính đến hiện tại, so sánh với các ngân hàng thương mại cổ phần có quy mô tương đương. Người đọc là Ban Điều hành nên viết dạng memo khoảng 3-4 trang: mở đầu bằng bảng tóm tắt rủi ro (vấn đề, mức độ, đề xuất), phần phân tích chi tiết để sau.
+> Trong cuộc họp này, có vấn đề nào mọi người chưa thống nhất hoặc câu hỏi nào chưa được trả lời không? Ai đang giữ quan điểm nào? Gợi ý cho tôi một câu hỏi để chốt lại từng vấn đề trước khi kết thúc họp.
 
-**Kết quả mong đợi:** Agent lập **Research Plan** nhiều bước, tự thu thập dữ liệu, đối chiếu với `MKB - Financial Analysis Q3 2026.xlsx` và xuất memo Word có bảng tóm tắt rủi ro ở đầu. Hai rủi ro nổi bật nên được chỉ ra: phí bancassurance chiếm 52% tổng phí (nhóm so sánh khoảng 31%) trong bối cảnh siết bán chéo bảo hiểm, và tỷ trọng cho vay bất động sản, chứng khoán 39% đi kèm nợ nhóm 2 tăng từ 1,9% lên 2,9%.
+**Kết quả mong đợi:** Danh sách vấn đề còn mở kèm quan điểm của từng người, giúp anh/chị chủ động chốt trước khi cuộc họp kết thúc.
 
-> [!TIP]
-> Researcher thường mất vài phút để hoàn thành. Anh/chị có thể chuyển sang việc khác và quay lại khi báo cáo xong.
+### Bài tập 3: Biên bản điều hành sau cuộc họp
 
-> [!NOTE]
-> Luôn kiểm tra nguồn trích dẫn trong báo cáo của Researcher, đặc biệt với thông tin pháp lý và số liệu ngành, trước khi dùng cho quyết định quan trọng.
+1. Sau cuộc họp, mở cuộc họp trong **Chat** hoặc **Calendar**, chọn tab **Recap**
+2. Mở **Copilot** và nhập:
+
+> **PROMPT:**
+>
+> Tạo biên bản điều hành của cuộc họp: các quyết định đã chốt, bảng việc cần làm gồm Việc | Người phụ trách | Chỉ tiêu | Thời hạn, và các vấn đề còn treo cần tôi quyết định. Đánh dấu những cam kết chưa có thời hạn rõ ràng.
+
+3. Hỏi tiếp để gửi cho cả nhóm:
+
+> **PROMPT:**
+>
+> Soạn tin nhắn gửi nhóm họp: cảm ơn, tóm tắt 3 quyết định chính, nhắc từng người việc của mình và thời hạn.
+
+### Bài tập 4: Tóm tắt nhóm chat của đội ngũ
+
+1. Mở một nhóm chat hoặc kênh của đội (ví dụ nhóm chat các RM của trung tâm)
+2. Bấm **Copilot** ở góc trên khung chat và nhập:
+
+> **PROMPT:**
+>
+> Tóm tắt các trao đổi trong 7 ngày qua: vấn đề khách hàng nổi bật, câu hỏi chưa được trả lời, và những việc đang chờ tôi quyết định hoặc phản hồi.
 
 ---
 
 ## Lưu ý tuân thủ
 
 > [!NOTE]
-> Researcher kết hợp dữ liệu web và tài liệu nội bộ. Không đưa tên hay thông tin định danh khách hàng vào đề bài. Báo cáo là tài liệu tham khảo, không thay thế ý kiến của Pháp chế; luôn mở nguồn trích dẫn để kiểm tra văn bản pháp luật gốc.
+> Chỉ bật Recording và Transcription sau khi đã thông báo và được người tham dự bên ngoài đồng ý. Transcript cuộc họp có khách hàng là dữ liệu Mật, chỉ lưu trong Teams/SharePoint của ngân hàng. Biên bản do Copilot tạo phải được người chủ trì rà soát trước khi gửi.
+
+---
+
+## Prompt đề xuất - Teams
+
+### Trong cuộc họp
+
+> **PROMPT:**
+>
+> 1. Có nội dung nào trong cuộc họp yêu cầu tôi thực hiện hoặc phản hồi không?
+> 2. Những con số nào đã được đưa ra trong cuộc họp (chỉ tiêu, chi phí, thời hạn)? Liệt kê kèm người nói.
+
+### Sau cuộc họp
+
+> **PROMPT:**
+>
+> So sánh cuộc họp này với cuộc họp giao ban tuần trước: những cam kết nào đã hoàn thành, những cam kết nào bị lùi thời hạn?
+
+### Chat & Channel
+
+> **PROMPT:**
+>
+> Trong kênh của Khối tuần này, có thông báo hoặc quyết định nào tôi cần truyền đạt lại cho đội ngũ của mình không?
 
 ---
 
 ## Tổng kết
 
-| Anh/chị đã học được | Ứng dụng |
-|---------------------|----------|
-| Giao đề bài dạng câu hỏi chiến lược | Researcher |
-| Định hình báo cáo theo người đọc | Researcher |
-| Kết nối nghiên cứu với số liệu nội bộ để ra đề xuất | Researcher + Excel |
+| Anh/chị đã học được | Tính năng |
+|---------------------|-----------|
+| Bắt kịp cuộc họp và chốt điểm còn bất đồng | Copilot trong cuộc họp |
+| Biên bản điều hành có người phụ trách, thời hạn | Recap |
+| Nắm nhanh tình hình trong nhóm chat của đội | Chat & Channel Summarizing |

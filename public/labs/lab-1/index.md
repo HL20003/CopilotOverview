@@ -1,9 +1,9 @@
-# Lab 1 - Copilot trong Word
+# Lab 1 - Copilot Chat
 
-**Thời lượng:** 22 phút | **Ứng dụng:** Word
+**Ứng dụng:** Microsoft 365 Copilot Chat
 
 > [!NOTE]
-> **Ngân hàng TMCP Minh Khang (MKB) là ngân hàng giả tưởng.** Toàn bộ tên ngân hàng, nhân vật, khách hàng, số liệu và tài liệu trong lab chỉ phục vụ mục đích minh họa, không liên quan đến bất kỳ tổ chức có thật nào.
+> **Toàn bộ tài liệu, số liệu và tình huống trong workshop là bản nháp (draft) dùng cho mục đích đào tạo.** Tên nhân vật, khách hàng và đối tác là giả định.
 
 ---
 
@@ -11,128 +11,101 @@
 
 Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
-- Biến ghi chú đàm phán rời rạc thành điều khoản hợp đồng hoàn chỉnh, không để Copilot tự "điền" những điểm chưa chốt
-- Dịch tài liệu cho đối tác nước ngoài và tạo bản tóm tắt dành riêng cho lãnh đạo của họ
-- Đưa một tài liệu lỗi định dạng về chuẩn văn bản nội bộ, rồi rút ra bản tóm tắt để phổ biến
+- Tổng hợp tình hình từ email, cuộc họp và tài liệu thành một bản cập nhật cho Ban Điều hành
+- Đặt nhiều tài liệu cạnh nhau để Copilot chỉ ra điểm khớp và điểm hở trước khi ra quyết định
+- Chuyển sang chế độ Web để cập nhật diễn biến thị trường ảnh hưởng tới khách hàng
 
 ### Tính năng chính
 
 | Tính năng | Mô tả |
 |-----------|--------|
-| **Document Content Generating** | Tạo hoặc viết tiếp nội dung dựa trên ngữ cảnh tài liệu |
-| **Document Translations** | Dịch tài liệu sang ngôn ngữ khác, giữ nguyên cấu trúc |
-| **Document Formatting** | Chuẩn hóa font, heading, đánh số theo mẫu |
+| **Work grounding** | Trả lời dựa trên email, lịch, cuộc họp, file mà anh/chị có quyền truy cập |
+| **Phân tích nhiều tài liệu** | Đính kèm nhiều file bằng "/" và hỏi xuyên suốt các file |
+| **Work / Web** | Chuyển giữa dữ liệu công việc nội bộ và thông tin công khai trên internet |
 
 ---
 
-## Phần A: Hoàn thiện và dịch thỏa thuận hợp tác
+## Tình huống
 
-### Tình huống
-
-> **Anh Nguyễn Hoàng Vũ** - *Senior Exclusive Relationship Manager, MKB*
+> **Anh Trần Minh Quân** - *Giám đốc Khối Khách hàng Ưu tiên*
 >
-> Sau buổi đàm phán với Nordvik Engineering Việt Nam, một doanh nghiệp FDI muốn MKB phục vụ ban lãnh đạo và chuyên gia nước ngoài của họ theo gói Exclusive, anh Vũ chỉ kịp ghi vội các điểm đã thống nhất ở cuối dự thảo. Anh cần biến những ghi chú đó thành Mục 7 hoàn chỉnh, sau đó gửi bản tiếng Anh cho Tổng Giám đốc Nordvik, người không có thời gian đọc hết cả văn bản.
+> Sáng thứ Hai, anh Quân cần gửi Ban Điều hành bản cập nhật tình hình Khối, đồng thời chuẩn bị ý kiến về dự thảo Chương trình Đặc quyền 2027 trước khi Phòng Phát triển Khách hàng trình chính thức. Thông tin nằm rải rác trong hộp thư, các cuộc họp tuần qua và nhiều file khác nhau. Anh dùng Copilot Chat để gom lại, đối chiếu và ra quyết định.
 
-**Tài liệu demo:** [MKB - Thỏa thuận Hợp tác Exclusive Banking.docx](#file-proposal) - dự thảo thỏa thuận khung giữa Ngân hàng TMCP Minh Khang và Công ty TNHH Nordvik Engineering Việt Nam, cuối tài liệu có phần *Ghi chú của người soạn thảo*.
+**Tài liệu demo:** [Financial Analysis Q3 2026.xlsx](#file-financial) và [Chương trình Đặc quyền Exclusive 2027.docx](#file-privilege), đã lưu trên OneDrive.
 
-*Xem toàn bộ file demo tại trang [Giới thiệu và chuẩn bị](#module-1) và [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may).*
+*Xem toàn bộ file demo tại trang [Module 1](#module-1) và [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may).*
 
-### Bài tập 1: Từ ghi chú đàm phán thành Mục 7
+---
+
+### Bài tập 1: Bản cập nhật tuần cho Ban Điều hành
 
 **Cách thực hiện:**
 
-1. Mở file [MKB - Thỏa thuận Hợp tác Exclusive Banking.docx](#file-proposal) và đọc lướt phần *Ghi chú của người soạn thảo* ở cuối
-2. Đặt con trỏ ở cuối tài liệu, mở **Copilot** trên ribbon
+1. Truy cập [https://m365.cloud.microsoft/](https://m365.cloud.microsoft/), đăng nhập bằng **tài khoản công ty**
+2. Chọn **Copilot**, đảm bảo đang ở chế độ **Work**
 3. Nhập prompt:
 
 > **PROMPT:**
 >
-> Dựa trên phần "Ghi chú của người soạn thảo" ở cuối tài liệu, hãy viết Mục 7 "Điều khoản tài chính và tín dụng" theo đúng văn phong và cách đánh số của Mục 1 đến Mục 6. Mỗi ý trong ghi chú trở thành một điều khoản con, nêu rõ công thức lãi suất, các khoản phí được miễn, điều kiện giải ngân, số dư cam kết và chế tài. Những điểm ghi chú nói là chưa thống nhất hoặc chưa chốt thì không tự điền con số, mà ghi [CHỜ PHÁP CHẾ XÁC NHẬN] kèm câu hỏi cần làm rõ.
+> Dựa trên email, cuộc họp và tài liệu của tôi trong 7 ngày qua, soạn bản cập nhật tình hình gửi Ban Điều hành gồm 4 phần: kết quả nổi bật, vấn đề cần lưu ý, quyết định cần Ban Điều hành phê duyệt, và kế hoạch tuần tới. Mỗi ý ghi rõ nguồn thông tin. Tối đa một trang.
 
-**Kết quả mong đợi:** Mục 7 có các điều khoản 7.1, 7.2... đúng nội dung đã đàm phán: lãi suất cố định 6,2%/năm trong 12 tháng đầu, thấu chi tối đa 500 triệu/1 tỷ đồng, số dư CASA cam kết 30 tỷ đồng/quý... Hai điểm mức phạt và thời hạn cho vay chuyên gia nước ngoài được để ở dạng [CHỜ PHÁP CHẾ XÁC NHẬN].
+**Kết quả mong đợi:** Một bản cập nhật có cấu trúc, mỗi ý có trích dẫn tới email, cuộc họp hoặc file gốc để anh/chị kiểm tra trước khi gửi.
 
 > [!TIP]
-> Câu "không tự điền con số" là cách giữ Copilot trong giới hạn. Với tài liệu pháp lý, chỗ trống được đánh dấu rõ ràng an toàn hơn một con số "nghe hợp lý" mà không ai đàm phán.
+> Bấm vào từng trích dẫn để kiểm tra. Ý nào không có nguồn rõ ràng, hãy hỏi tiếp: *"Ý thứ 3 lấy từ đâu?"*
 
-### Bài tập 2: Bản tiếng Anh và tóm tắt cho lãnh đạo đối tác
+### Bài tập 2: Đối chiếu tài liệu trước khi ra quyết định
 
-> **PROMPT:**
->
-> Dịch toàn bộ thỏa thuận sang tiếng Anh theo văn phong hợp đồng ngân hàng quốc tế, giữ nguyên số liệu, tên riêng và cách đánh số. Thêm ở đầu bản dịch một phần "Executive Summary" khoảng 150 từ dành cho Tổng Giám đốc Nordvik: 5 lợi ích chính cho nhân viên của họ và 3 nghĩa vụ phía Nordvik cần thực hiện. Cuối bản dịch lập bảng đối chiếu thuật ngữ Việt - Anh.
-
-**Kết quả mong đợi:** Bản tiếng Anh có Executive Summary ở đầu và bảng thuật ngữ ở cuối, ví dụ:
-
-| Tiếng Việt | English |
-|------------|---------|
-| Hợp đồng khung | Framework Agreement |
-| Số dư cam kết tối thiểu | Minimum Committed Balance |
-| Lãi suất tham chiếu | Reference Rate |
-| Tiền gửi không kỳ hạn | Current Account and Savings Account (CASA) |
-
----
-
-## Phần B: Chuẩn hóa định dạng tài liệu
-
-### Tình huống
-
-> **Anh Trần Minh Quân** - *Giám đốc Pháp chế và Tuân thủ, MKB*
->
-> Chính sách Bảo mật Thông tin Khách hàng vừa được bổ sung mục về sử dụng AI, nhưng bản Word chuyển từ PDF bị lỗi font, mất dấu tiếng Việt, câu bị ngắt dòng giữa chừng. Anh Quân cần đưa tài liệu về chuẩn văn bản nội bộ trước khi trình Ban Điều hành, đồng thời có ngay một bản tóm tắt ngắn để gửi toàn bộ RM.
-
-**Tài liệu demo:** [SAMPLE Chính sách Bảo mật Thông tin Khách hàng.docx](#file-policy-sample) (bản chuyển đổi từ PDF, bị lỗi font chữ và định dạng), cùng các tệp tham chiếu [Transcript - BRK311 - Copy.docx](#file-transcript) (biên bản một buổi trình bày tại Microsoft Ignite) và [MKB - Financial Analysis Q3 2026.xlsx](#file-financial).
-
-*Xem [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may).*
-
-### Bài tập 3: Chuẩn hóa tài liệu và rút ra bản phổ biến
-
-**Cách thực hiện:**
-
-1. Mở file [SAMPLE Chính sách Bảo mật Thông tin Khách hàng.docx](#file-policy-sample). Để ý các chữ mất dấu, font lẫn lộn và câu bị ngắt giữa chừng
-2. Nhấn **Copilot** trên ribbon và nhập prompt:
+1. Mở cuộc trò chuyện mới, gõ "/" để đính kèm hai file [Financial Analysis Q3 2026.xlsx](#file-financial) và [Chương trình Đặc quyền Exclusive 2027.docx](#file-privilege)
+2. Nhập prompt:
 
 > **PROMPT:**
 >
-> Đưa tài liệu này về chuẩn văn bản nội bộ: toàn bộ dùng font Arial cỡ 12, các mục chính đánh số thống nhất 1, 2, 3... và dùng Heading 1, các ý bên trong dùng gạch đầu dòng. Sửa các chữ tiếng Việt bị mất dấu hoặc bị tách, nối lại các câu bị ngắt dòng giữa chừng, xóa các dòng số trang lạc trong nội dung. Không thay đổi ý nghĩa của bất kỳ quy định nào.
+> Tôi cần cho ý kiến về dự thảo Chương trình Đặc quyền 2027 trước khi trình Ban Điều hành. Đặt chương trình cạnh kết quả kinh doanh quý 3 trong file Excel và cho tôi biết: chương trình giải quyết được những vấn đề nào của Khối, vấn đề nào chưa được giải quyết, và 2 điều chỉnh tôi nên yêu cầu trước khi trình. Trình bày dạng bảng.
 
-3. Sau khi tài liệu đã gọn, hỏi tiếp trong cùng khung Copilot:
+**Kết quả mong đợi:** Copilot chỉ ra chương trình đã nhắm vào tỷ lệ CASA thấp (CASA Booster) và sự phụ thuộc vào phí bancassurance (mục tiêu tăng phí wealth management), nhưng **chưa đề cập** rủi ro tín dụng đang tăng: dư nợ cho vay bất động sản, chứng khoán chiếm 39% và nợ nhóm 2 tăng lên 2,9%.
+
+### Bài tập 3: Cập nhật thị trường với chế độ Web
+
+1. Chuyển nút **Work / Web** sang **Web**
+2. Nhập prompt:
 
 > **PROMPT:**
 >
-> Tóm tắt mục "Sử dụng công cụ trí tuệ nhân tạo" thành một bảng hai cột "Được làm" và "Không được làm", tối đa 6 dòng, ngôn ngữ dễ hiểu để gửi email cho toàn bộ RM.
+> Tóm tắt những diễn biến trong 2 tuần qua về lãi suất huy động, thị trường trái phiếu doanh nghiệp và chính sách tín dụng tại Việt Nam có thể ảnh hưởng tới nhóm khách hàng cá nhân có tài sản cao. Với mỗi diễn biến, nêu tác động có thể có tới danh mục khách hàng và việc Khối nên làm. Kèm nguồn cho từng ý.
 
-> [!NOTE]
-> Copilot xử lý tốt font, heading và đánh số. Một số lỗi bố cục phức tạp (bảng bị vỡ, hình ảnh lệch) có thể vẫn cần chỉnh thủ công.
+3. Hỏi tiếp để đưa kết quả vào công việc:
+
+> **PROMPT:**
+>
+> Từ các diễn biến trên, soạn 3 thông điệp ngắn để các Giám đốc Trung tâm hướng dẫn RM trao đổi với khách hàng trong tuần này. Không đưa ra dự báo hay cam kết về lợi nhuận.
+
+> [!TIP]
+> Dùng **Work** cho câu hỏi về công việc nội bộ, **Web** cho thông tin thị trường công khai. Ở chế độ Web, Copilot không dùng email hay file nội bộ của anh/chị.
 
 ---
 
 ## Lưu ý tuân thủ
 
 > [!NOTE]
-> Lãi suất, biểu phí, hạn mức do Copilot soạn chỉ là bản nháp, phải đối chiếu biểu phí hiện hành và được Pháp chế duyệt trước khi gửi khách hàng. Với tài liệu pháp lý song ngữ, bản tiếng Việt đã duyệt là bản gốc. Không đưa số CIF, CCCD, số tài khoản của khách hàng vào tài liệu nháp.
+> Bản cập nhật gửi Ban Điều hành là tài liệu Mật: kiểm tra nhãn phân loại trước khi chia sẻ. Thông tin từ chế độ Web cần được kiểm tra nguồn trước khi chuyển cho RM hoặc khách hàng. Không nhập thông tin định danh khách hàng vào prompt.
 
 ---
 
-## Prompt đề xuất - Word
+## Prompt đề xuất - Copilot Chat
 
-### Translation
-
-> **PROMPT:**
->
-> 1. Dịch thư này sang tiếng Anh theo văn phong private banking: trang trọng, ấm áp, không dùng từ ngữ hứa hẹn lợi nhuận. Đặt bản tiếng Việt bên dưới để tôi đối chiếu.
-> 2. Rà soát bản tiếng Anh này như một người bản xứ làm ngân hàng, chỉ ra những câu nghe "dịch máy" và đề xuất cách viết tự nhiên hơn.
-
-### Content Generating
+### Điều hành hằng ngày
 
 > **PROMPT:**
 >
-> 1. Từ file /[biên bản họp hoặc email], soạn tờ trình xin phê duyệt ngoại lệ hạn mức gồm: bối cảnh khách hàng (đã ẩn danh), đề xuất, căn cứ, rủi ro và biện pháp giảm thiểu. Đánh dấu những chỗ tôi cần bổ sung số liệu.
-> 2. Viết thư tri ân khách hàng Diamond nhân dịp tròn 5 năm gắn bó với MKB, khoảng 120 từ, giọng chân thành, nhắc tới [sở thích hoặc dấu mốc của khách hàng], không giới thiệu sản phẩm.
+> 1. Những việc nào tôi đã hứa với Ban Điều hành hoặc các Giám đốc Trung tâm trong 2 tuần qua mà chưa hoàn thành?
+> 2. Tuần này tôi có những cuộc họp nào quan trọng, và cần chuẩn bị gì cho từng cuộc họp?
 
-### Formatting
+### Ra quyết định
 
 > **PROMPT:**
 >
-> Chuyển nội dung này thành mẫu tờ trình nội bộ: tiêu đề in hoa, phần "Kính gửi", bảng tóm tắt đề xuất ngay đầu trang, các mục chính đánh số La Mã, font Arial cỡ 12 và đánh số trang ở chân trang.
+> So sánh hai phương án trong file /[tên file]: ưu điểm, rủi ro, chi phí và tác động tới khách hàng của từng phương án. Đề xuất phương án nên chọn và lý do.
 
 ---
 
@@ -140,6 +113,6 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 | Anh/chị đã học được | Tính năng |
 |---------------------|-----------|
-| Biến ghi chú thành điều khoản, giữ chỗ trống cho phần chưa chốt | Content Generating |
-| Dịch tài liệu và tạo Executive Summary cho đối tác | Translations |
-| Chuẩn hóa tài liệu và rút ra bản tóm tắt để phổ biến | Formatting + Content Generating |
+| Tổng hợp tình hình từ nhiều nguồn thành báo cáo lãnh đạo | Work grounding |
+| Đối chiếu tài liệu để chỉ ra điểm hở trước khi quyết định | Phân tích nhiều tài liệu |
+| Cập nhật thị trường và chuyển thành thông điệp cho đội ngũ | Work / Web |
