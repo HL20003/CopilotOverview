@@ -13,7 +13,7 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 - Tổng hợp tình hình từ email, cuộc họp và tài liệu thành một bản cập nhật cho Ban Điều hành
 - Đặt nhiều tài liệu cạnh nhau để Copilot chỉ ra điểm khớp và điểm hở trước khi ra quyết định
-- Chuyển sang chế độ Web để cập nhật diễn biến thị trường ảnh hưởng tới khách hàng
+- Tắt Work IQ để cập nhật diễn biến thị trường ảnh hưởng tới khách hàng
 
 ### Tính năng chính
 
@@ -21,7 +21,7 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 |-----------|--------|
 | **Work grounding** | Trả lời dựa trên email, lịch, cuộc họp, file mà anh/chị có quyền truy cập |
 | **Phân tích nhiều tài liệu** | Đính kèm nhiều file bằng "/" và hỏi xuyên suốt các file |
-| **Work / Web** | Chuyển giữa dữ liệu công việc nội bộ và thông tin công khai trên internet |
+| **Work IQ** | Nút bật/tắt ở góc trên bên trái màn hình Chat. **Bật**: Copilot dùng dữ liệu công việc (email, file, chat, cuộc họp) kèm thông tin web. **Tắt**: Copilot không dùng dữ liệu công việc, chỉ dùng file đính kèm và thông tin công khai trên web |
 
 ---
 
@@ -42,7 +42,7 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 **Cách thực hiện:**
 
 1. Truy cập [https://m365.cloud.microsoft/](https://m365.cloud.microsoft/), đăng nhập bằng **tài khoản công ty**
-2. Chọn **Copilot**, đảm bảo đang ở chế độ **Work**
+2. Chọn **Copilot**, đảm bảo nút **Work IQ** ở góc trên bên trái đang **bật**
 3. Nhập prompt:
 
 > **PROMPT:**
@@ -65,9 +65,9 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 **Kết quả mong đợi:** Copilot chỉ ra chương trình đã nhắm vào tỷ lệ CASA thấp (CASA Booster) và sự phụ thuộc vào phí bancassurance (mục tiêu tăng phí wealth management), nhưng **chưa đề cập** rủi ro tín dụng đang tăng: dư nợ cho vay bất động sản, chứng khoán chiếm 39% và nợ nhóm 2 tăng lên 2,9%.
 
-### Bài tập 3: Cập nhật thị trường với chế độ Web
+### Bài tập 3: Cập nhật thị trường từ thông tin trên web
 
-1. Chuyển nút **Work / Web** sang **Web**
+1. Tắt nút **Work IQ** ở góc trên bên trái màn hình Chat, để Copilot chỉ tìm thông tin công khai trên web, không trộn với dữ liệu nội bộ
 2. Nhập prompt:
 
 > **PROMPT:**
@@ -81,14 +81,14 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 > Từ các diễn biến trên, soạn 3 thông điệp ngắn để các Giám đốc Trung tâm hướng dẫn RM trao đổi với khách hàng trong tuần này. Không đưa ra dự báo hay cam kết về lợi nhuận.
 
 > [!TIP]
-> Dùng **Work** cho câu hỏi về công việc nội bộ, **Web** cho thông tin thị trường công khai. Ở chế độ Web, Copilot không dùng email hay file nội bộ của anh/chị.
+> **Bật Work IQ** cho câu hỏi về công việc nội bộ, **tắt Work IQ** khi chỉ cần thông tin thị trường công khai. Khi tắt Work IQ, Copilot không dùng email hay file nội bộ của anh/chị. Nhớ bật lại Work IQ trước khi làm các bài tập tiếp theo.
 
 ---
 
 ## Lưu ý tuân thủ
 
 > [!NOTE]
-> Bản cập nhật gửi Ban Điều hành là tài liệu Mật: kiểm tra nhãn phân loại trước khi chia sẻ. Thông tin từ chế độ Web cần được kiểm tra nguồn trước khi chuyển cho RM hoặc khách hàng. Không nhập thông tin định danh khách hàng vào prompt.
+> Bản cập nhật gửi Ban Điều hành là tài liệu Mật: kiểm tra nhãn phân loại trước khi chia sẻ. Thông tin lấy từ web cần được kiểm tra nguồn trước khi chuyển cho RM hoặc khách hàng. Không nhập thông tin định danh khách hàng vào prompt.
 
 ---
 
@@ -115,4 +115,4 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 |---------------------|-----------|
 | Tổng hợp tình hình từ nhiều nguồn thành báo cáo lãnh đạo | Work grounding |
 | Đối chiếu tài liệu để chỉ ra điểm hở trước khi quyết định | Phân tích nhiều tài liệu |
-| Cập nhật thị trường và chuyển thành thông điệp cho đội ngũ | Work / Web |
+| Cập nhật thị trường và chuyển thành thông điệp cho đội ngũ | Work IQ |

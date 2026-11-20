@@ -63,7 +63,7 @@ Nhờ Microsoft Graph, Copilot hiểu **ngữ cảnh công việc** của riêng
 | Đọc email, lịch, chat của chính anh/chị | Đọc email của đồng nghiệp hay của RM khác |
 | Đọc file trên OneDrive/SharePoint anh/chị có quyền | Mở file anh/chị không được chia sẻ |
 | Dùng transcript cuộc họp anh/chị tham dự (đã bật transcript) | Truy cập cuộc họp anh/chị không tham dự |
-| Tìm thông tin công khai trên web (chế độ **Web**) | Đọc core banking, CRM, hệ thống thẻ... nếu ngân hàng chưa kết nối |
+| Tìm thông tin công khai trên web (tắt **Work IQ**) | Đọc core banking, CRM, hệ thống thẻ... nếu ngân hàng chưa kết nối |
 
 > [!NOTE]
 > Copilot tuân theo đúng mô hình phân quyền Microsoft 365 hiện có. Copilot không cấp thêm quyền cho ai, nó chỉ giúp anh/chị **tìm nhanh hơn** những gì anh/chị vốn đã có quyền xem.
@@ -108,7 +108,7 @@ Vì Copilot tìm kiếm rất giỏi, những tài liệu **đang bị chia sẻ
 | **Researcher** | Nghiên cứu chuyên sâu nhiều bước từ web và tài liệu nội bộ | Lab 7 |
 | **Agent Builder** | Tự tạo trợ lý AI riêng cho đội ngũ | Lab 8 |
 
-Trong Copilot Chat có nút chuyển **Work / Web**: **Work** trả lời dựa trên email, file, cuộc họp anh/chị có quyền truy cập; **Web** trả lời dựa trên thông tin công khai trên internet.
+Trong Copilot Chat có nút **Work IQ** ở góc trên bên trái (thay cho hai tab Work / Web trước đây). **Bật Work IQ**: Copilot trả lời dựa trên email, file, chat, cuộc họp anh/chị có quyền truy cập, kèm thông tin trên web. **Tắt Work IQ**: Copilot không dùng dữ liệu công việc, chỉ dùng file đính kèm và thông tin công khai trên internet. Với tài khoản có licence Microsoft 365 Copilot, Work IQ bật sẵn.
 
 ---
 
@@ -140,7 +140,7 @@ Các bài thực hành tuân theo bộ quy định giả định dưới đây, 
 | **Outlook** | Mở Outlook (web hoặc bản mới), thấy biểu tượng **Copilot** trên thanh công cụ |
 | **Word, Excel, PowerPoint** | Mở một file bất kỳ, thấy nút **Copilot** trên ribbon, tab **Home** |
 | **Teams** | Trong một cuộc họp hoặc khung chat, thấy biểu tượng **Copilot** |
-| **Copilot Chat** | Truy cập [m365.cloud.microsoft](https://m365.cloud.microsoft/), thấy nút chuyển **Work / Web** |
+| **Copilot Chat** | Truy cập [m365.cloud.microsoft](https://m365.cloud.microsoft/), thấy nút **Work IQ** ở góc trên bên trái |
 
 > [!TIP]
 > Nếu không thấy biểu tượng Copilot, hãy báo ngay cho người hướng dẫn để kiểm tra licence trước khi vào lab.

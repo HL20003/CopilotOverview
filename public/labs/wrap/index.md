@@ -7,10 +7,10 @@
 | Phần | Ứng dụng | Năng lực |
 |------|----------|----------|
 | Module 1-3 | Nền tảng | Copilot hoạt động thế nào, bảo mật, viết prompt hiệu quả, Customize Copilot |
-| Lab 1 | Copilot Chat | Tổng hợp từ nhiều nguồn cho Ban Điều hành, đối chiếu tài liệu, chế độ Work / Web |
+| Lab 1 | Copilot Chat | Tổng hợp từ nhiều nguồn cho Ban Điều hành, đối chiếu tài liệu, nút Work IQ |
 | Lab 2 | Word | Rà soát dự thảo, đối chiếu chính sách, soạn tờ trình phê duyệt ngoại lệ |
-| Lab 3 | Excel | Bức tranh kết quả kinh doanh, phân loại đội ngũ RM, so sánh với chuẩn ngành |
-| Lab 4 | PowerPoint | Slide giới thiệu cho khách hàng, slide tư vấn cá nhân hóa, diễn tập câu hỏi của khách hàng |
+| Lab 3 | PowerPoint | Slide giới thiệu cho khách hàng, slide tư vấn cá nhân hóa, diễn tập câu hỏi của khách hàng |
+| Lab 4 | Excel | Bức tranh kết quả kinh doanh, phân loại đội ngũ RM, so sánh với chuẩn ngành |
 | Lab 5 | Outlook | Hộp thư thành danh sách quyết định, xử lý email leo thang, chuẩn bị buổi gặp |
 | Lab 6 | Teams | Bắt kịp cuộc họp, biên bản điều hành, tóm tắt nhóm chat của đội |
 | Lab 7 | Researcher | Nghiên cứu chiến lược, kết nối với số liệu nội bộ |

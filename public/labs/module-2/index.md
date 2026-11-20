@@ -156,7 +156,7 @@ Bộ prompt theo nhịp làm việc trong ngày. Anh/chị có thể sao chép v
 
 ## Thực hành nhanh
 
-Mở [Copilot Chat](https://m365.cloud.microsoft/) ở chế độ **Work** và thử hai prompt dưới đây với dữ liệu của chính anh/chị:
+Mở [Copilot Chat](https://m365.cloud.microsoft/) với nút **Work IQ** đang bật và thử hai prompt dưới đây với dữ liệu của chính anh/chị:
 
 > **PROMPT:**
 >
