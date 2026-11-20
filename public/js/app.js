@@ -8,8 +8,8 @@ const demoFiles = [
     { id: 'proposal', name: 'Thỏa thuận Hợp tác Exclusive Banking.docx', desc: 'Lab 2 - Word', icon: 'word', url: 'files/thoa-thuan-hop-tac-exclusive-banking.docx' },
     { id: 'handbook', name: 'Sổ tay Sản phẩm và Chính sách Exclusive.docx', desc: 'Lab 2 - Word, Lab 8 - Agent Builder (knowledge source)', icon: 'word', url: 'files/so-tay-san-pham-va-chinh-sach-exclusive.docx' },
     { id: 'policy-sample', name: 'SAMPLE Chính sách Bảo mật Thông tin Khách hàng.docx', desc: 'Lab 2 - Word (phần mở rộng)', icon: 'word', url: 'files/sample-chinh-sach-bao-mat-thong-tin-khach-hang.docx' },
-    { id: 'financial', name: 'Financial Analysis Q3 2026.xlsx', desc: 'Lab 1 - Copilot Chat, Lab 3 - Excel, Lab 7 - Researcher', icon: 'excel', url: 'files/financial-analysis-q3-2026.xlsx' },
-    { id: 'privilege', name: 'Chương trình Đặc quyền Exclusive 2027.docx', desc: 'Lab 1 - Copilot Chat, Lab 4 - PowerPoint', icon: 'word', url: 'files/chuong-trinh-dac-quyen-exclusive-2027.docx' },
+    { id: 'financial', name: 'Financial Analysis Q3 2026.xlsx', desc: 'Lab 1 - Copilot Chat, Lab 4 - Excel, Lab 7 - Researcher', icon: 'excel', url: 'files/financial-analysis-q3-2026.xlsx' },
+    { id: 'privilege', name: 'Chương trình Đặc quyền Exclusive 2027.docx', desc: 'Lab 1 - Copilot Chat, Lab 3 - PowerPoint', icon: 'word', url: 'files/chuong-trinh-dac-quyen-exclusive-2027.docx' },
 ];
 
 // Danh sách module và file markdown tương ứng
@@ -19,8 +19,8 @@ const modules = {
     'module-3': { title: 'Module 3 - Personalization in Copilot', file: 'labs/module-3/index.md' },
     'lab-1':    { title: 'Lab 1 - Copilot Chat', file: 'labs/lab-1/index.md' },
     'lab-2':    { title: 'Lab 2 - Copilot trong Word', file: 'labs/lab-2/index.md' },
-    'lab-3':    { title: 'Lab 3 - Copilot trong Excel', file: 'labs/lab-3/index.md' },
-    'lab-4':    { title: 'Lab 4 - Copilot trong PowerPoint', file: 'labs/lab-4/index.md' },
+    'lab-3':    { title: 'Lab 3 - Copilot trong PowerPoint', file: 'labs/lab-3/index.md' },
+    'lab-4':    { title: 'Lab 4 - Copilot trong Excel', file: 'labs/lab-4/index.md' },
     'lab-5':    { title: 'Lab 5 - Copilot trong Outlook', file: 'labs/lab-5/index.md' },
     'lab-6':    { title: 'Lab 6 - Copilot trong Teams', file: 'labs/lab-6/index.md' },
     'lab-7':    { title: 'Lab 7 - Researcher Agent', file: 'labs/lab-7/index.md' },

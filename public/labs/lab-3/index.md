@@ -1,6 +1,6 @@
-# Lab 3 - Copilot trong Excel
+# Lab 3 - Copilot trong PowerPoint
 
-**Ứng dụng:** Excel
+**Ứng dụng:** PowerPoint
 
 > [!NOTE]
 > **Toàn bộ tài liệu, số liệu và tình huống trong workshop là bản nháp (draft) dùng cho mục đích đào tạo.** Tên nhân vật, khách hàng và đối tác là giả định.
@@ -11,98 +11,104 @@
 
 Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
-- Hỏi Copilot về workbook nhiều sheet như hỏi một chuyên viên phân tích, nhận câu trả lời có số liệu và nguồn
-- Phân loại đội ngũ RM theo tiêu chí của mình để biết cần hỗ trợ ai
-- Tạo biểu đồ so sánh với chuẩn ngành, tiêu đề nói lên điều cần hành động
+- Biến tài liệu nội bộ thành bộ slide giới thiệu dành cho khách hàng Exclusive, đúng ngôn ngữ khách hàng
+- Tạo bộ slide tư vấn cá nhân hóa cho một gia đình khách hàng từ hồ sơ đã ẩn danh
+- Diễn tập trước những câu hỏi khó của khách hàng để vào buổi gặp tự tin hơn
 
 ### Tính năng chính
 
 | Tính năng | Mô tả |
 |-----------|--------|
-| **Insights** | Phân tích chuyên sâu, tìm xu hướng và biến động |
-| **Formula** | Tạo cột tính toán, phân loại theo tiêu chí |
-| **Infographic** | Trực quan hóa dữ liệu bằng biểu đồ |
+| **Slide Creating** | Tạo bài thuyết trình từ file Word hoặc từ mô tả |
+| **Speaker notes** | Viết lời trình bày cho từng slide |
+| **Hỏi đáp trên bộ slide** | Hỏi Copilot về nội dung bộ slide đang mở |
 
 ---
 
 ## Tình huống
 
-> **Chị Phạm Thu Hằng** - *Phó Giám đốc Khối Khách hàng Ưu tiên*
+> **Chị Phạm Ngọc Lan** - *Exclusive Manager*
 >
-> Mười phút trước cuộc họp giao ban với Ban Điều hành, chị Hằng nhận được workbook kết quả quý 3 của Khối. Chị cần nắm nhanh bức tranh tổng thể, biết nhóm RM nào cần hỗ trợ, và có một biểu đồ cho thấy Khối đang đứng ở đâu so với các ngân hàng cùng nhóm về tỷ lệ CASA.
+> Chương trình Đặc quyền Khách hàng Exclusive 2027 vừa được phê duyệt. Chị Lan đang phục vụ trực tiếp nhóm khách hàng Platinum và Diamond. Tuần tới chị có buổi gặp một gia đình khách hàng Platinum đang gần ngưỡng Diamond. Chị dùng Copilot trong PowerPoint để có bộ slide giới thiệu chương trình, một bộ slide riêng cho gia đình khách hàng, và diễn tập trước những câu hỏi khó.
 
-**Tệp demo:** [Financial Analysis Q3 2026.xlsx](#file-financial), gồm các sheet *Output - Q3 Performance*, *Danh mục RM*, *Thu nhập tháng*, *TrialBalance*, *UnitEconomics*, *Comps*, *PL_Budget_Actual*
+**Tài liệu nguồn:** [Chương trình Đặc quyền Exclusive 2027.docx](#file-privilege)
 
 *Xem toàn bộ file demo tại trang [Module 1](#module-1) và [cách tải file Word/Excel về máy](#module-1/cach-tai-file-word-excel-ve-may).*
 
 ---
 
-### Bài tập 1: Bức tranh quý 3 trong 5 ý
+### Bài tập 1: Bộ slide giới thiệu chương trình cho khách hàng
 
 **Cách thực hiện:**
 
-1. Mở file [Financial Analysis Q3 2026.xlsx](#file-financial)
+1. Mở PowerPoint, tạo bản trình bày mới
 2. Nhấn **Copilot** trên ribbon
-3. Nhập prompt:
+3. Gõ "/" để đính kèm file [Chương trình Đặc quyền Exclusive 2027.docx](#file-privilege), rồi nhập prompt:
 
 > **PROMPT:**
 >
-> Tôi sắp họp với Ban Điều hành. Dựa trên workbook này, Khối Khách hàng Ưu tiên quý 3 đang tốt lên hay xấu đi so với quý 2 và so với kế hoạch? Điều gì đáng lo nhất và vì sao? Trả lời trong đúng 5 gạch đầu dòng, mỗi ý có con số cụ thể và ghi tên sheet lấy số liệu.
+> Dựa trên file đính kèm, tạo bộ slide 6 trang để giới thiệu chương trình với khách hàng Exclusive. Viết bằng ngôn ngữ của khách hàng: khách được gì, không dùng thuật ngữ nội bộ. Có một slide so sánh đặc quyền của 3 hạng dạng bảng, một slide về Exclusive Family (gộp tài sản gia đình) và Exclusive Next-Gen, slide cuối là các bước để nâng hạng. Bỏ toàn bộ ngân sách, chỉ tiêu và số liệu kinh doanh nội bộ. Thêm speaker notes cho mỗi slide.
 
-**Kết quả mong đợi:** 5 ý ngắn có số liệu, ví dụ: thu nhập tăng 2,1% so với quý 2 nhưng lợi nhuận trước thuế giảm 4,5% vì chi phí dự phòng cao hơn kế hoạch 79%; tỷ lệ CASA chỉ 16,5% so với kế hoạch 19%; phí bancassurance chiếm 52% tổng phí.
-
-### Bài tập 2: Phân loại đội ngũ RM để lên kế hoạch hỗ trợ
-
-> **PROMPT:**
->
-> Trong sheet Danh mục RM, thêm cột "Xếp loại": loại A nếu AUM của RM cao hơn mức trung bình toàn khối và tỷ lệ CASA trên huy động từ 18% trở lên, loại C nếu cả hai tiêu chí đều không đạt, còn lại là loại B. Sau đó lập bảng đếm số RM loại A, B, C theo từng trung tâm và chỉ ra 3 trung tâm có tỷ lệ RM loại C cao nhất.
-
-**Kết quả mong đợi:** Cột Xếp loại dùng công thức và bảng tổng hợp theo trung tâm. Toàn khối có khoảng 33 RM loại A, 82 loại B và 125 loại C, cho thấy cần một chương trình hỗ trợ tập trung cho nhóm C.
+**Kết quả mong đợi:** Bộ slide 6 trang nói về lợi ích của khách hàng (lãi suất cộng thêm, chuyển tiền quốc tế, phòng chờ sân bay, khám sức khỏe, tư vấn thừa kế cho Diamond…), không còn con số ngân sách 186 tỷ đồng hay chỉ tiêu theo vùng.
 
 > [!TIP]
-> Bấm vào một ô trong cột mới để xem công thức Copilot đã viết. Hiểu công thức giúp anh/chị tự điều chỉnh tiêu chí (ví dụ đổi ngưỡng CASA thành 20%) mà không cần hỏi lại.
+> Tài liệu nội bộ và tài liệu cho khách hàng khác nhau ở **người đọc**. Hãy nói rõ trong prompt "viết cho khách hàng" và "bỏ số liệu nội bộ", sau đó vẫn tự rà lại từng slide trước khi dùng.
 
-### Bài tập 3: So sánh với chuẩn ngành
+### Bài tập 2: Bộ slide tư vấn riêng cho một gia đình khách hàng
 
 > **PROMPT:**
 >
-> Từ sheet UnitEconomics, tạo biểu đồ cột thể hiện tỷ lệ CASA của từng trung tâm, sắp xếp từ cao xuống thấp, thêm một đường ngang là trung vị của nhóm ngân hàng so sánh lấy từ sheet Comps. Tô màu khác cho các trung tâm dưới 15%. Đặt tiêu đề nêu đúng phát hiện chính, không chỉ ghi tên chỉ số.
+> Tạo bộ slide 5 trang cho buổi gặp gia đình khách hàng sau (hồ sơ đã ẩn danh): Khách hàng A, 54 tuổi, hạng Platinum, tổng tài sản bình quân 11 tỷ đồng; vợ có 3 tỷ đồng tiền gửi tại ngân hàng; con gái 17 tuổi dự định du học năm 2028. Dựa trên file /Chương trình Đặc quyền Exclusive 2027, cho thấy: gia đình đang ở đâu, lợi ích nếu gộp tài sản theo Exclusive Family, những đặc quyền phù hợp với kế hoạch du học của con, và bước tiếp theo đề xuất. Không cam kết lợi nhuận đầu tư. Chỗ nào cần kiểm tra lại ghi [CẦN XÁC NHẬN].
 
-**Kết quả mong đợi:** Biểu đồ có đường chuẩn 24,5%, tiêu đề nêu phát hiện, ví dụ *"Cả 12 trung tâm có tỷ lệ CASA dưới trung vị ngành 24,5%, thấp nhất là Ninh Kiều với 11,9%"*.
+**Kết quả mong đợi:** Copilot chỉ ra gia đình có tổng 14 tỷ đồng khi gộp tài sản, chỉ còn thiếu khoảng 1 tỷ đồng để đạt Diamond (từ 15 tỷ đồng). Bộ slide nêu các đặc quyền gắn với nhu cầu thật: chuyển tiền quốc tế không giới hạn, giảm chênh lệch tỷ giá 40% khi chuyển học phí, chương trình Exclusive Next-Gen cho con.
+
+> [!NOTE]
+> Chỉ dùng **hồ sơ ẩn danh** (Khách hàng A, độ tuổi, hạng, quy mô tài sản). Không đưa tên thật, CIF, số tài khoản hay CCCD vào prompt. Tài liệu gửi khách hàng phải theo mẫu và quy trình duyệt của ngân hàng.
+
+### Bài tập 3: Diễn tập câu hỏi khó của khách hàng
+
+Với bộ slide vừa tạo, nhập prompt:
+
+> **PROMPT:**
+>
+> Hãy đóng vai khách hàng A: doanh nhân, khó tính, đang được một ngân hàng khác mời chào. Dựa trên bộ slide này, đặt 5 câu hỏi khó nhất anh ấy có thể hỏi tôi về quyền lợi, chi phí và lý do nên gộp tài sản gia đình vào ngân hàng. Với mỗi câu, gợi ý cách trả lời ngắn gọn, đúng quy định (không cam kết lợi nhuận, không gắn bảo hiểm làm điều kiện ưu đãi), và chỉ ra slide nào cần bổ sung.
+
+**Kết quả mong đợi:** 5 câu hỏi sát thực tế (ví dụ: *"Bên kia cho lãi suất cao hơn, sao tôi phải chuyển?"*, *"Gộp tài sản thì thông tin của vợ tôi có bị lộ không?"*, *"Nếu tài sản giảm thì có bị hạ hạng ngay không?"*), kèm gợi ý trả lời và slide cần bổ sung.
+
+> [!TIP]
+> Hỏi tiếp: *"Thêm một slide dự phòng trả lời câu hỏi số 1"* để mang theo trong buổi gặp.
 
 ---
 
 ## Lưu ý tuân thủ
 
 > [!NOTE]
-> Danh mục khách hàng theo RM là thông tin Mật. Chỉ dùng Copilot với file đã gắn nhãn phân loại và mã khách hàng đã ẩn danh, không gửi bảng chi tiết khách hàng qua email ra ngoài. Số liệu Copilot tính phải được đối chiếu với báo cáo chính thức trước khi trình.
+> Slide dùng cho khách hàng không được chứa số liệu kinh doanh nội bộ. Không cam kết lợi nhuận, luôn đánh giá mức độ phù hợp trước khi tư vấn sản phẩm đầu tư. Kiểm tra mọi con số trên slide (hạn mức, lãi suất, tỷ lệ ưu đãi) khớp với tài liệu chính thức trước khi trình bày.
 
 ---
 
-## Prompt đề xuất - Excel
+## Prompt đề xuất - PowerPoint
 
-### Insights Analysis
-
-> **PROMPT:**
->
-> 1. So sánh hai trung tâm [tên trung tâm] và [tên trung tâm]: khác nhau ở đâu về số khách hàng mỗi RM, AUM bình quân mỗi khách hàng và thu nhập mỗi RM? Điều gì giải thích chênh lệch?
-> 2. Với tốc độ hiện tại, Khối có hoàn thành chỉ tiêu CASA cuối năm không? Cần tăng thêm bao nhiêu mỗi tháng để đạt?
-
-### Formulas
+### Speaker notes
 
 > **PROMPT:**
 >
-> 1. Phân bổ chỉ tiêu huy động CASA quý 4 cho từng trung tâm theo tỷ trọng AUM hiện tại, thêm cột chênh lệch giữa chỉ tiêu và số dư hiện có.
-> 2. Thêm cột cảnh báo cho các RM có số khách hàng vượt quá 120 người.
+> Viết speaker notes cho toàn bộ bài thuyết trình, mỗi slide khoảng 45 giây, giọng tư vấn gần gũi, bắt đầu bằng nhu cầu của khách hàng rồi mới đến sản phẩm.
 
-### Chart / Infographic Generation
+### Rút gọn cho buổi gặp ngắn
 
 > **PROMPT:**
 >
-> Từ sheet PL_Budget_Actual, tạo biểu đồ thác nước (waterfall) giải thích chênh lệch giữa lợi nhuận trước thuế kế hoạch và thực hiện quý 3 theo từng khoản mục thu nhập và chi phí.
+> Rút bộ slide này còn 3 slide quan trọng nhất cho buổi cà phê 15 phút với khách hàng, giữ lại bảng so sánh hạng và bước tiếp theo.
+
+### Sự kiện khách hàng
+
+> **PROMPT:**
+>
+> Tạo bài trình bày 6 slide cho buổi hội thảo triển vọng đầu tư quý dành cho khách hàng Diamond từ file /[báo cáo thị trường], có một slide về rủi ro và một slide giới thiệu đặc quyền sự kiện riêng cho Diamond.
 
 > [!NOTE]
-> Dữ liệu nên được định dạng dạng **Table** (Ctrl + T) để Copilot đọc chính xác hơn.
+> File Word cần được lưu trên OneDrive hoặc SharePoint thì Copilot mới tham chiếu được.
 
 ---
 
@@ -110,6 +116,6 @@ Sau khi hoàn thành lab này, anh/chị sẽ có thể:
 
 | Anh/chị đã học được | Tính năng |
 |---------------------|-----------|
-| Nắm nhanh bức tranh tổng thể, có số liệu và nguồn | Insights |
-| Phân loại đội ngũ RM theo tiêu chí riêng | Formula |
-| Biểu đồ so sánh với chuẩn ngành, tiêu đề nêu phát hiện | Infographic |
+| Chuyển tài liệu nội bộ thành slide cho khách hàng | Slide Creating |
+| Bộ slide tư vấn cá nhân hóa từ hồ sơ ẩn danh | Slide Creating + Speaker notes |
+| Diễn tập câu hỏi khó của khách hàng | Hỏi đáp trên bộ slide |
